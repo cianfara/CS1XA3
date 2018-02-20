@@ -1,0 +1,13 @@
+#!/bin/bash
+
+Green="\033[0;32m"
+White="\033[1;37m"
+Space="\t\t\t\t\t\t\t"
+Format=${Space}${Green}
+
+cat testData |
+while read stuffToDo
+do
+        echo -e "${stuffToDo}${Format}[OK]${White}"
+	sleep 0.5
+done
