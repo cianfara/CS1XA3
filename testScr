@@ -17,3 +17,10 @@ echo "Adding changes to log"
 git status | grep "modified" > changes.log
 grep -r "#ToDo" . > todo.log
 find . -name "*.hs" | xargs ghc -fno-code > error.log
+
+git status -s | tr -d "/? " |
+while read stuffToAdd
+do
+	echo "Adding ${stuffToAdd} to local branch"
+	git add $stuffToAdd
+done
