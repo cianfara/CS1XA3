@@ -6,12 +6,15 @@ Space="\t\t\t\t\t\t\t"
 Format=${Space}${Green}
 Home=~/CS1XA3
 
-cat testData |
-while read stuffToDo
-do
-        echo -e "${stuffToDo}${Format}[OK]${White}"
-	sleep 0.5
-done
+if [[ $1 != *"q"* ]]
+then
+	cat testData |
+	while read stuffToDo
+	do
+        	echo -e "${stuffToDo}${Format}[OK]${White}"
+		sleep 0.5
+	done
+fi
 
 git status
 echo "Adding changes to log"
@@ -35,17 +38,19 @@ done
 echo "Creating working tree log"
 find -type d | sed "/git/d" > workingTree.log
 
-echo "Please enter a file name"
-read fileName
-echo "Enter default text"
-read defaultText
-
-cat workingTree.log |
-while read targetDir #ToDo check if file already exists. Have flag for overwrite
-do
-	echo "Creatin file ${fileName} in ${targetDir}"
-	cd $targetDir
-	touch ${fileName}
-	echo ${defaultText} > ${fileName}
-	cd ${Home}
-done
+if [[ $1 == *"a"* ]]
+then
+	echo "Please enter a file name"
+	read fileName
+	echo "Enter default text"
+	read defaultText
+	cat workingTree.log |
+	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+	do
+		echo "Creatin file ${fileName} in ${targetDir}"
+		cd $targetDir
+		touch ${fileName}
+		echo ${defaultText} > ${fileName}
+		cd ${Home}
+	done
+fi
