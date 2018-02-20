@@ -11,3 +11,9 @@ do
         echo -e "${stuffToDo}${Format}[OK]${White}"
 	sleep 0.5
 done
+
+git status
+echo "Adding changes to log"
+git status | grep "modified" > changes.log
+grep -r "#ToDo" . > todo.log
+find . -name "*.hs" | xargs ghc -fno-code > error.log
