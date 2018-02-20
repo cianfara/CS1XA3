@@ -1,5 +1,5 @@
 ./testScr:grep -r "#ToDo" . > todo.log
-./testScr:while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./testScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
 ./Labs/Elm01/ToDo:#ToDo Do some elm stuff
 ./Labs/Elm01/ToDo:#ToDo end file
 ./Labs/Bash01/ToDo:#ToDo add some stuff

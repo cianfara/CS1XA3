@@ -1,0 +1,4 @@
+if [[ $0 == *"p"* ]]
+then
+	echo "P Found!"
+fi
