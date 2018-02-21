@@ -22,19 +22,28 @@ git status | grep "modified" > changes.log
 grep -r "#ToDo" . > todo.log
 find . -name "*.hs" | xargs ghc -fno-code > error.log
 
-git status | grep "new*" | sed s/"new file:"//g | tr -d "\t " |    #Long but honestly it works
+echo "Staring Add Files"
+git status -s | grep "??*\|M" | sed 's/.\{3\}//' |    #Long but honestly it works
 while read stuffToAdd
-do	
-	find -name "*${stuffToAdd}" -printf '%h\n' | sort -u |
+do
+	find -name ${stuffToAdd} |
 	while read inDir
 	do
-		echo "Adding ${stuffToAdd} in ${inDir}"
+		echo "Adding $(basename "$stuffToAdd") in ${inDir}"
 		cd ${inDir}
-		git add $stuffToAdd
+		git add $(basename "$stuffToAdd")
 		cd $Home
 	done
 	cd $Home
 done
+
+git status -s | grep "D" | sed 's/.\{3\}//' |
+while read stuffToRm
+do
+        git rm -f ${stuffToRm}
+done
+
+
 echo "Creating working tree log"
 find -type d | sed "/git/d" > workingTree.log
 
