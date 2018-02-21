@@ -1,0 +1,15 @@
+#!/bin/bash
+
+git status -s | grep "??*" | tr -d "? " |    #Long but honestly it works
+while read stuffToAdd
+do
+        find -name "*${stuffToAdd}" -printf '%h\n' | sort -u |
+        while read inDir
+        do
+                echo "Adding ${stuffToAdd} in ${inDir}"
+                cd ${inDir}
+                git add $stuffToAdd
+                cd $Home
+        done
+        cd $Home
+done
