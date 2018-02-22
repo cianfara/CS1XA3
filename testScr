@@ -74,7 +74,7 @@ then
         if [[ $1 == *"m"* ]]
         then
                 echo "Sending commit with message ${2}"
-                git commit -m ${2}
+                git commit -m "${2}"
         fi
 else
         echo "Sending commit with default message"
