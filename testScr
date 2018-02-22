@@ -5,6 +5,7 @@ White="\033[1;37m"
 Space="\t\t\t\t\t\t\t"
 Format=${Space}${Green}
 Home=~/CS1XA3
+DefaultGitMsg="Default commit message"
 
 if [[ $1 != *"q"* ]]
 then
@@ -47,7 +48,7 @@ done
 echo "Creating working tree log"
 find -type d | sed "/git/d" > workingTree.log
 
-if [[ $1 == *"a"* ]]
+if [[ $1 == *"d"* ]]
 then
 	echo "Please enter a file name"
 	read fileName
@@ -62,4 +63,20 @@ then
 		echo ${defaultText} > ${fileName}
 		cd ${Home}
 	done
+fi
+
+echo -e "\n\n\nUpdated git status"
+echo "---------------------------------"
+git status
+
+if [[ $1 == *"u"* ]]
+then
+        if [[ $1 == *"m"* ]]
+        then
+                echo "Sending commit with message ${2}"
+                git commit -m ${2}
+        fi
+else
+        echo "Sending commit with default message"
+        git commit -m ${DefaultGitMsg}
 fi

@@ -1,0 +1,5 @@
+-----------HELP----------
+q -> Supress start text
+u -> Commit text
+m -> Add message for commit. Must be second arg
+d -> Insert text file in all dir
