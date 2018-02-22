@@ -38,6 +38,7 @@ do
 	cd $Home
 done
 
+echo "Starting remove files"
 git status -s | grep "D" | sed 's/.\{3\}//' |
 while read stuffToRm
 do
@@ -78,5 +79,5 @@ then
         fi
 else
         echo "Sending commit with default message"
-        git commit -m ${DefaultGitMsg}
+        git commit -m "testStuff"
 fi
