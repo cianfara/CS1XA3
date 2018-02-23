@@ -4,9 +4,10 @@ Green="\033[0;32m"
 White="\033[1;37m"
 Space="\t\t\t\t\t\t\t"
 Format=${Space}${Green}
-Home=~/CS1XA3
+Home=$(pwd)
 DefaultGitMsg="Default commit message"
 
+echo "Root directory is set to: ${Home}"
 if [[ $1 != *"q"* ]]
 then
 	cat testData |
@@ -24,15 +25,21 @@ grep -r "#ToDo" . > todo.log
 find . -name "*.hs" | xargs ghc -fno-code > error.log
 
 echo "Staring Add Files"
-git status -s | grep "??*\|M" | sed 's/.\{3\}//' |    #Long but honestly it works
+git status -s | grep "??*\|M" | sed 's/.\{3\}//' |    #Sed is magic. Please don't touch
 while read stuffToAdd
 do
 	find -name ${stuffToAdd} |
 	while read inDir
 	do
-		echo "Adding $(basename "$stuffToAdd") in ${inDir}"
-		cd ${inDir}
-		git add $(basename "$stuffToAdd")
+		CheckTag=$(grep "#ignore" $(basename "$stuffToAdd")) #Going two sub-shells deep
+		if [ "$CheckTag" != "#ignore" ]
+		then
+        		echo "Adding $(basename "$stuffToAdd") in ${inDir}"
+                	cd ${inDir}
+               		git add $(basename "$stuffToAdd")
+		else
+        		echo "Found #ignore tag: $(basename "$stuffToAdd") ignored"
+		fi
 		cd $Home
 	done
 	cd $Home
@@ -58,7 +65,7 @@ then
 	cat workingTree.log |
 	while read targetDir #ToDo check if file already exists. Have flag for overwrite
 	do
-		echo "Creatin file ${fileName} in ${targetDir}"
+		echo "Creating file ${fileName} in ${targetDir}"
 		cd $targetDir
 		touch ${fileName}
 		echo ${defaultText} > ${fileName}
@@ -76,8 +83,8 @@ then
         then
                 echo "Sending commit with message ${2}"
                 git commit -m "${2}"
+	else
+		echo "Sending commit with default message"
+        	git commit -m "testStuff"
         fi
-else
-        echo "Sending commit with default message"
-        git commit -m "testStuff"
 fi
