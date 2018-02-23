@@ -7,7 +7,7 @@ Format=${Space}${Green}
 Home=$(pwd)
 DefaultGitMsg="Default commit message"
 
-if [[ $1 = *"help"* ]]
+if [[ $1 = "--help" ]]
 then
 	cat testScrMan
 	exit 0
@@ -16,7 +16,7 @@ fi
 echo "Root directory is set to: ${Home}"
 if [[ $1 != *"q"* ]]
 then
-	cat testData |
+	cat startupData |
 	while read stuffToDo
 	do
         	echo -e "${stuffToDo}${Format}[OK]${White}"
@@ -27,23 +27,50 @@ fi
 git status
 echo "Adding changes to log"
 git status | grep "modified" > changes.log
-grep -r "#ToDo" . > todo.log
+grep --exclude="todo.log" -r "#ToDo" . > todo.log
 find . -name "*.hs" | xargs ghc -fno-code > error.log
 
+echo "Creating working tree log"
+find -type d | sed "/git/d" > workingTree.log
+
+if [[ $1 == *"d"* ]]
+then
+        echo "Please enter a file name"
+        read fileName
+        echo "Enter default text"
+        read defaultText
+        cat workingTree.log |
+        while read targetDir #ToDo check if file already exists. Have flag for overwrite
+        do
+		
+                echo "Creating file ${fileName} in ${targetDir}"
+                cd $targetDir
+                touch ${fileName}
+		if [[ $1 == *"a"* ]]
+		then
+			echo ${defaultText} >> ${fileName}
+		else
+                	echo ${defaultText} > ${fileName}
+		fi
+                cd ${Home}
+        done
+fi
+
+
 echo "Staring Add Files"
-git status -s | grep "??*\|M" | sed 's/.\{3\}//' |    #Sed is magic. Please don't touch
+git status -s | grep "??*\|M" | sed 's/.\{3\}//' |  					        #Sed is magic. Please don't touch
 while read stuffToAdd
 do
-	find -name $(basename ${stuffToAdd}) -printf '%h\n' |
+	find -name $(basename ${stuffToAdd}) -printf '%h\n' |  					#This finds the files and leaves just the path
 	while read inDir
 	do
+		cd ${inDir}
 		if [ -e $(basename "$stuffToAdd") ]
 		then
-			CheckTag=$(grep "#ignore" $(basename "$stuffToAdd")) #Going two sub-shells deep
+			CheckTag=$(grep "#ignore" $(basename "$stuffToAdd")) 			#Going two sub-shells deep
 			if [ "$CheckTag" != "#ignore" ]
 			then
         			echo "Adding $(basename "$stuffToAdd") in ${inDir}"
-                		cd ${inDir}
                			git add $(basename "$stuffToAdd")
 			else
         			echo "Found #ignore tag: $(basename "$stuffToAdd") ignored"
@@ -60,27 +87,6 @@ while read stuffToRm
 do
         git rm -f ${stuffToRm}
 done
-
-
-echo "Creating working tree log"
-find -type d | sed "/git/d" > workingTree.log
-
-if [[ $1 == *"d"* ]]
-then
-	echo "Please enter a file name"
-	read fileName
-	echo "Enter default text"
-	read defaultText
-	cat workingTree.log |
-	while read targetDir #ToDo check if file already exists. Have flag for overwrite
-	do
-		echo "Creating file ${fileName} in ${targetDir}"
-		cd $targetDir
-		touch ${fileName}
-		echo ${defaultText} > ${fileName}
-		cd ${Home}
-	done
-fi
 
 echo -e "\n\n\nUpdated git status"
 echo "---------------------------------"
