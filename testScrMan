@@ -3,4 +3,5 @@ q -> Supress start text
 u -> Commit text
 m -> Add message for commit. Must be second arg
 d -> Insert text file in all dir
+p -> Push commit
 If #Ignore tag is found the file will be skipped
