@@ -124,7 +124,7 @@ if [[ $1 == *"i"* ]]
 then
 	echo "Entering Interpreted Mode"
 	echo "Type \"helpPage\" for help"
-	for (( ; ; ))
+	for (( ; ; ))					# Loop should never exit
 	do
 		echo "Enter a command:"
 		read toExe
