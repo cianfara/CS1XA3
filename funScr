@@ -120,39 +120,11 @@ function gitPush
 	git push
 }
 
-if [[ $1 == *"i"* ]]
-then
-	echo "Entering Interpreted Mode"
-	echo "Type \"helpPage\" for help"
-	for (( ; ; ))					# Loop should never exit
-	do
-		echo "Enter a command:"
-		read toExe
-		$toExe
-	done
-else
-	if [[ $1 = "--help" ]]
-	then
-		helpPage
-	fi
-	if [[ $1 != *"q"* ]]
-	then
-		startUp
-	fi
-	mainStuff
-	if [[ $1 == *"d"* ]]
-	then
-		createDefault
-	fi
-	addFiles
-	removeFiles
-	getStatus
-	if [[ $1 == *"p"* ]]
-	then
-		gitPush
-	fi
-	if [[ $1 == *"u"* ]]
-	then
-		gitCommit
-	fi
-fi
+echo "Entering Interpreted Mode"
+echo "Type \"helpPage\" for help"
+for (( ; ; ))
+do
+	echo "Enter a command:"
+	read toExe
+	$toExe
+done
