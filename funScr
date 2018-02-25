@@ -123,6 +123,7 @@ function gitPush
 if [[ $1 == *"i"* ]]
 then
 	echo "Entering Interpreted Mode"
+	echo "Type \"helpPage\" for help"
 	for (( ; ; ))
 	do
 		echo "Enter a command:"
