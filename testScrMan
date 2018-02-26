@@ -1,4 +1,5 @@
 -----------HELP----------
+"help" displays this page
 u -> Update tracking
 i -> Interperted
 q -> Supress start text
@@ -13,9 +14,9 @@ If #Ignore tag is found the file will be skipped
 helpPage 		-> Display current page
 startUp  		-> Run startup text
 mainStuff 		-> Run main code for assignment
-createDefault 	-> Create a default text file in each folder | Takes arg for append
+createDefault 		-> Create a default text file in each folder | Takes argument for append
 addFiles 		-> Add files to git tracking
-removeFiles 	-> Remove files from git tracking
+removeFiles 		-> Remove files from git tracking
 getStatus 		-> Get git status
 gitPush 		-> Push code to local git
-gitCommit 		-> Commit changes | Takes arg for optional message
+gitCommit 		-> Commit changes | Takes argument for optional message

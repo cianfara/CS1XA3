@@ -7,7 +7,7 @@ Format=${Space}${Green}
 Home=$(pwd)												#Executes Pwd so the Dir does not change while running
 DefaultGitMsg="Default commit message"									#This is used if the -m flag is not given
 
-if [[ $1 = "--help" ]]
+if [[ $1 = "help" ]]
 then
 	cat testScrMan
 	exit 0
