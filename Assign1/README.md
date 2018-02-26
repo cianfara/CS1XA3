@@ -25,12 +25,12 @@
 
 > Creats a log of all files with the #todo tag
 
-> Checkes haskell files for erros and stores results in a log
+> Checkes haskell files for errors and stores results in a log
 
 # -----------HELP----------
 The below flags can be included in any order as the first argument (Unless noted)
 
---help -> Display in script help file
+help -> Display in script help file
 
 u -> Update tracking
 
