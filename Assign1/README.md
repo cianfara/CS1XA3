@@ -68,3 +68,24 @@ getStatus 		-> Get git status
 gitPush 		-> Push code to local git
 
 gitCommit 		-> Commit changes | Takes argument for optional message
+
+# References
+https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
+
+https://stackoverflow.com/questions/12668020/removing-characters-from-grep-output
+
+https://unix.stackexchange.com/questions/15197/is-there-a-correct-way-to-list-the-subdirectories-of-the-current-directory?rq=1
+
+https://stackoverflow.com/questions/26850806/sed-replace-exact-match
+
+https://stackoverflow.com/questions/229551/string-contains-in-bash
+
+https://stackoverflow.com/questions/27658675/how-to-remove-last-n-characters-from-a-string-in-bash
+
+https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash
+
+https://stackoverflow.com/questions/19951369/how-to-store-grep-command-result-in-some-variable-in-shell
+
+https://www.cyberciti.biz/faq/bash-infinite-loop/
+
+http://tldp.org/LDP/abs/html/functions.html
