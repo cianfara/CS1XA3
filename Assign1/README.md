@@ -38,7 +38,7 @@ q -> Supress start text
 
 c -> Commit text
 
-m -> Add message for commit. Must be second argument
+m -> Add message for commit. Message must be second argument
 
 d -> Insert text file in all directory
 
