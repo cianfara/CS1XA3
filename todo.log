@@ -1,22 +1,94 @@
-./changes.log:- grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./changes.log:- grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./changes.log:-+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./changes.log:-+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./changes.log:-+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./changes.log:-+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./changes.log:-+./changes.log:+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./changes.log:-+./changes.log:+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./changes.log:-+./changes.log:+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
-./changes.log:-+./changes.log:+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
-./changes.log:-+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./changes.log:-+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
-./changes.log:-+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
-./changes.log:-+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./changes.log:-+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
-./changes.log:-+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
-./changes.log:- ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./changes.log:- ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
-./changes.log:- ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log:-- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:--+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:--+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:--+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:--+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:--+./changes.log:+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:--+./changes.log:+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:--+./changes.log:+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:--+./changes.log:+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log:--+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:--+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:--+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log:--+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:--+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:--+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log:-- ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-- ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:-- ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-        while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:+        while read targetDir 									#ToDo check if file already exists. Have flag for overwrite
+./changes.log:-./changes.log:- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-./changes.log:- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-./changes.log:-+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-./changes.log:-+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-./changes.log:-+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-./changes.log:-+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-./changes.log:-+./changes.log:+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-./changes.log:-+./changes.log:+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-./changes.log:-+./changes.log:+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:-./changes.log:-+./changes.log:+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log:-./changes.log:-+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-./changes.log:-+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:-./changes.log:-+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log:-./changes.log:-+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-./changes.log:-+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:-./changes.log:-+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log:-./changes.log:- ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:-./changes.log:- ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:-./changes.log:- ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log:+./changes.log:-- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./changes.log:-- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./changes.log:--+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./changes.log:--+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./changes.log:--+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./changes.log:--+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./changes.log:--+./changes.log:+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./changes.log:--+./changes.log:+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./changes.log:--+./changes.log:+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:+./changes.log:--+./changes.log:+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log:+./changes.log:--+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./changes.log:--+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:+./changes.log:--+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log:+./changes.log:--+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./changes.log:--+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:+./changes.log:--+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log:+./changes.log:-- ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./changes.log:-- ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:+./changes.log:-- ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./changes.log:+./grep.log:./changes.log:-- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./changes.log:-- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./changes.log:--+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./changes.log:--+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./changes.log:--+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./changes.log:--+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./changes.log:--+./changes.log:+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./changes.log:--+./changes.log:+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./changes.log:--+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./changes.log:--+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./changes.log:-- ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./testScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./changes.log:-- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./changes.log:-- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./changes.log:--+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./changes.log:--+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./changes.log:--+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./changes.log:--+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./changes.log:--+./changes.log:+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./changes.log:--+./changes.log:+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./changes.log:--+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./changes.log:--+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./changes.log:-- ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log:+./grep.log:./todo.log:./testScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+./changes.log: ./Labs/Bash01/ToDo:#ToDo second add stuff
+./changes.log: ./Labs/Elm01/ToDo:#ToDo Do some elm stuff
 ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
 ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
 ./Labs/Bash01/ToDo:#ToDo add some stuff
@@ -24,4 +96,4 @@
 ./Labs/Elm01/ToDo:#ToDo Do some elm stuff
 ./Labs/Elm01/ToDo:#ToDo end file
 ./testScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
-./testScr:        while read targetDir #ToDo check if file already exists. Have flag for overwrite
+./testScr:        while read targetDir 									#ToDo check if file already exists. Have flag for overwrite

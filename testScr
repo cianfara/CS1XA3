@@ -4,7 +4,7 @@ Green="\033[0;32m"
 White="\033[1;37m"
 Space="\t\t\t\t\t\t\t"
 Format=${Space}${Green}
-Home=$(pwd)
+Home=$(pwd)														#Executes Pwd so the Dir does not change while running
 DefaultGitMsg="Default commit message"
 
 if [[ $1 = "--help" ]]
@@ -15,9 +15,9 @@ fi
 
 if [[ $1 == *"i"* ]]
 then
-	cd $Home
-	./funScr			# Yes I am this lazy
-	exit 0              # Exit when the functional script is closed
+	cd $Home													# CD to script root for no apparent reason 
+	./funScr													#(Huge problem having both modes in one script. Mostly related to args now working)
+	exit 0              										# Exit when the functional script is closed
 fi
 
 echo "Root directory is set to: ${Home}"
@@ -33,17 +33,17 @@ fi
 
 git status
 echo "Adding changes to log"
-echo -e "\n\n${Green}New and Modified${White}" > changes.log #Overwrites the old log file
+echo -e "\n\n${Green}New and Modified${White}" > changes.log 		#Overwrites the old log file
 git status -s | grep "?? \| M " | sed 's/.\{3\}//' >> changes.log
 echo -e "\n\n${Green}Removed files:${White}" >> changes.log
 git status -s | grep " D " | sed 's/.\{3\}//' >> changes.log
 echo -e "\n\n${Green}Changed code:${White}" >> changes.log
-git diff >> changes.log
+git diff >> changes.log												#Appends actual code changes
 grep --exclude="todo.log" -r "#ToDo" . > todo.log
 find . -name "*.hs" | xargs ghc -fno-code > error.log
 
 echo "Creating working tree log"
-find -type d | sed "/git/d" > workingTree.log
+find -type d | sed "/git/d" > workingTree.log						#Sed here removes any hidden git folders
 
 if [[ $1 == *"s"* ]]
 then
@@ -55,11 +55,11 @@ fi
 if [[ $1 == *"d"* ]]
 then
         echo "Please enter a file name"
-        read fileName
+        read fileName											#Could get input with flags although cleaner to do while running
         echo "Enter default text"
         read defaultText
         cat workingTree.log |
-        while read targetDir #ToDo check if file already exists. Have flag for overwrite
+        while read targetDir 									#ToDo check if file already exists. Have flag for overwrite
         do
 		
                 echo "Creating file ${fileName} in ${targetDir}"
@@ -85,7 +85,7 @@ then
 		while read inDir
 		do
 			cd ${inDir}
-			if [ -e $(basename "$stuffToAdd") ]
+			if [ -e $(basename "$stuffToAdd") ]									#File does not exist
 			then
 				CheckTag=$(grep "#ignore" $(basename "$stuffToAdd")) 			#Going two sub-shells deep
 				if [ "$CheckTag" != "#ignore" ]
@@ -102,7 +102,7 @@ then
 	done
 
 	echo "Starting remove files"
-	git status -s | grep " D " | sed 's/.\{3\}//' | #Space needed
+	git status -s | grep " D " | sed 's/.\{3\}//' | 						#Space needed
 	while read stuffToRm
 	do
 			git rm -f ${stuffToRm}
@@ -121,7 +121,7 @@ then
                 git commit -m "${2}"
 	else
 		echo "Sending commit with default message"
-        	git commit -m "Default auto commit"
+        	git commit -m "$DefaultGitMsg"							#Set at the top of the program
         fi
 fi
 
