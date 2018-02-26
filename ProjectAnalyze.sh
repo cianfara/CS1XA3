@@ -4,8 +4,8 @@ Green="\033[0;32m"
 White="\033[1;37m"
 Space="\t\t\t\t\t\t\t"
 Format=${Space}${Green}
-Home=$(pwd)														#Executes Pwd so the Dir does not change while running
-DefaultGitMsg="Default commit message"
+Home=$(pwd)												#Executes Pwd so the Dir does not change while running
+DefaultGitMsg="Default commit message"									#This is used if the -m flag is not given
 
 if [[ $1 = "--help" ]]
 then
@@ -15,8 +15,8 @@ fi
 
 if [[ $1 == *"i"* ]]
 then
-	cd $Home													# CD to script root for no apparent reason 
-	./funScr													#(Huge problem having both modes in one script. Mostly related to args now working)
+	cd $Home											# CD to script root for no apparent reason 
+	./funProjectAnalyze.sh										#(Huge problem having both modes in one script. Mostly related to args now working)
 	exit 0              										# Exit when the functional script is closed
 fi
 
@@ -26,23 +26,23 @@ then
 	cat startupData |
 	while read stuffToDo
 	do
-        	echo -e "${stuffToDo}${Format}[OK]${White}"
+        	echo -e "${stuffToDo}${Format}[OK]${White}" 						#Loops through a textfile inserting it before the [OK]
 		sleep 0.5
 	done
 fi
 
 git status
 echo "Adding changes to log"
-echo -e "\n\n${Green}New and Modified${White}" > changes.log 		#Overwrites the old log file
-git status -s | grep "?? \| M " | sed 's/.\{3\}//' >> changes.log
+git diff > changes.log
+(echo -e "\n\n${Green}New and Modified${White}") >> changes.log 					#Overwrites the old log file
+git status -s | grep "?? \| M " | sed 's/.\{3\}//' >> changes.log    
 echo -e "\n\n${Green}Removed files:${White}" >> changes.log
-git status -s | grep " D " | sed 's/.\{3\}//' >> changes.log
-echo -e "\n\n${Green}Changed code:${White}" >> changes.log												#Appends actual code changes
+git status -s | grep " D " | sed 's/.\{3\}//' >> changes.log						#Appends actual code changes
 grep --exclude="todo.log" -r "#ToDo" . > todo.log
 find . -name "*.hs" | xargs ghc -fno-code > error.log
 
 echo "Creating working tree log"
-find -type d | sed "/git/d" > workingTree.log						#Sed here removes any hidden git folders
+find -type d | sed "/git/d" > workingTree.log								#Sed here removes any hidden git folders
 
 if [[ $1 == *"s"* ]]
 then
@@ -58,7 +58,7 @@ then
         echo "Enter default text"
         read defaultText
         cat workingTree.log |
-        while read targetDir 									#ToDo check if file already exists. Have flag for overwrite
+        while read targetDir 										#ToDo check if file already exists. Have flag for overwrite
         do
 		
                 echo "Creating file ${fileName} in ${targetDir}"
@@ -77,20 +77,20 @@ fi
 if [[ $1 == *"u"* ]]
 then
 	echo "Staring Add Files"
-	git status -s | grep "?? \| M " | sed 's/.\{3\}//' |  				        #Sed is magic. Please don't touch
+	git status -s | grep "?? \| M \|M \|MM " | sed 's/.\{3\}//' |  			  	        	 #Sed is magic. Please don't touch
 	while read stuffToAdd
 	do
-		find -name $(basename ${stuffToAdd}) -printf '%h\n' |  					#This finds the files and leaves just the path
+		find -name $(basename ${stuffToAdd}) -printf '%h\n' |  						#This finds the files and leaves just the path
 		while read inDir
 		do
 			cd ${inDir}
-			if [ -e $(basename "$stuffToAdd") ]									#File does not exist
+			if [ -e $(basename "$stuffToAdd") ]							#File does not exist
 			then
-				CheckTag=$(grep "#ignore" $(basename "$stuffToAdd")) 			#Going two sub-shells deep
+				CheckTag=$(grep "#ignore" $(basename "$stuffToAdd")) 				#Going two sub-shells deep
 				if [ "$CheckTag" != "#ignore" ]
 				then
 						echo "Adding $(basename "$stuffToAdd") in ${inDir}"
-							git add $(basename "$stuffToAdd")                   #Basename to get rid of the path
+							git add $(basename "$stuffToAdd")                       #Basename to get rid of the path
 				else
 						echo "Found #ignore tag: $(basename "$stuffToAdd") ignored"
 				fi
@@ -101,14 +101,14 @@ then
 	done
 
 	echo "Starting remove files"
-	git status -s | grep " D " | sed 's/.\{3\}//' | 						#Space needed
+	git status -s | grep " D " | sed 's/.\{3\}//' | 							#Space needed
 	while read stuffToRm
 	do
 			git rm -f ${stuffToRm}
 	done
 fi
 
-echo -e "\n\n\nUpdated git status (To Update please use the -u flag)"		#All code that changes files should be above here
+echo -e "\n\n\nUpdated git status (To Update please use the -u flag)"						#All code that changes files should be above here
 echo "---------------------------------"
 git status
 
@@ -120,7 +120,7 @@ then
                 git commit -m "${2}"
 	else
 		echo "Sending commit with default message"
-        	git commit -m "$DefaultGitMsg"							#Set at the top of the program
+        	git commit -m "$DefaultGitMsg"									#Set at the top of the program
         fi
 fi
 
