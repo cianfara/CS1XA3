@@ -1,7 +1,8 @@
 -----------HELP----------
-h -> Displays this page
+u -> Update tracking
+i -> Interperted
 q -> Supress start text
-u -> Commit text
+c -> Commit text
 m -> Add message for commit. Must be second arg
 d -> Insert text file in all dir
 p -> Push commit

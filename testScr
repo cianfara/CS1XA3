@@ -17,6 +17,7 @@ if [[ $1 == *"i"* ]]
 then
 	cd $Home
 	./funScr			# Yes I am this lazy
+	exit 0              # Exit when the functional script is closed
 fi
 
 echo "Root directory is set to: ${Home}"
@@ -62,43 +63,45 @@ then
         done
 fi
 
-
-echo "Staring Add Files"
-git status -s | grep "??*\|M" | sed 's/.\{3\}//' |  					        #Sed is magic. Please don't touch
-while read stuffToAdd
-do
-	find -name $(basename ${stuffToAdd}) -printf '%h\n' |  					#This finds the files and leaves just the path
-	while read inDir
+if [[ $1 == *"u"* ]]
+then
+	echo "Staring Add Files"
+	git status -s | grep "?? \| M " | sed 's/.\{3\}//' |  				        #Sed is magic. Please don't touch
+	while read stuffToAdd
 	do
-		cd ${inDir}
-		if [ -e $(basename "$stuffToAdd") ]
-		then
-			CheckTag=$(grep "#ignore" $(basename "$stuffToAdd")) 			#Going two sub-shells deep
-			if [ "$CheckTag" != "#ignore" ]
+		find -name $(basename ${stuffToAdd}) -printf '%h\n' |  					#This finds the files and leaves just the path
+		while read inDir
+		do
+			cd ${inDir}
+			if [ -e $(basename "$stuffToAdd") ]
 			then
-        			echo "Adding $(basename "$stuffToAdd") in ${inDir}"
-               			git add $(basename "$stuffToAdd")
-			else
-        			echo "Found #ignore tag: $(basename "$stuffToAdd") ignored"
+				CheckTag=$(grep "#ignore" $(basename "$stuffToAdd")) 			#Going two sub-shells deep
+				if [ "$CheckTag" != "#ignore" ]
+				then
+						echo "Adding $(basename "$stuffToAdd") in ${inDir}"
+							git add $(basename "$stuffToAdd")                   #Basename to get rid of the path
+				else
+						echo "Found #ignore tag: $(basename "$stuffToAdd") ignored"
+				fi
 			fi
-		fi
+			cd $Home
+		done
 		cd $Home
 	done
-	cd $Home
-done
 
-echo "Starting remove files"
-git status -s | grep "D" | sed 's/.\{3\}//' |
-while read stuffToRm
-do
-        git rm -f ${stuffToRm}
-done
+	echo "Starting remove files"
+	git status -s | grep " D " | sed 's/.\{3\}//' | #Space needed
+	while read stuffToRm
+	do
+			git rm -f ${stuffToRm}
+	done
+fi
 
-echo -e "\n\n\nUpdated git status"
+echo -e "\n\n\nUpdated git status (To Update please use the -u flag)"
 echo "---------------------------------"
 git status
 
-if [[ $1 == *"u"* ]]
+if [[ $1 == *"c"* ]]
 then
         if [[ $1 == *"m"* ]]
         then
