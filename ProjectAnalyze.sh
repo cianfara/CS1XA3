@@ -38,7 +38,7 @@ git diff > changes.log
 git status -s | grep "?? \| M " | sed 's/.\{3\}//' >> changes.log    
 echo -e "\n\n${Green}Removed files:${White}" >> changes.log
 git status -s | grep " D " | sed 's/.\{3\}//' >> changes.log						#Appends actual code changes
-grep --exclude="todo.log" -r "#ToDo" . > todo.log
+grep --exclude="todo.log" -r "#TODD" . > todo.log
 find . -name "*.hs" | xargs ghc -fno-code > error.log
 
 echo "Creating working tree log"
