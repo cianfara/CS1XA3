@@ -30,6 +30,8 @@
 # -----------HELP----------
 The below flags can be included in any order as the first argument (Unless noted)
 
+--help -> Display in script help file
+
 u -> Update tracking
 
 i -> Interpreted
