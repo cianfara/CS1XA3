@@ -1,0 +1,79 @@
+./.git/hooks/commit-msg.sample:# grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"
+./.git/hooks/commit-msg.sample:	echo >&2 Duplicate Signed-off-by lines.
+./.git/hooks/pre-push.sample:			echo "Found WIP commit in $local_ref, not pushing"
+./.git/hooks/pre-rebase.sample:	echo >&2 "No such branch $topic"
+./.git/hooks/pre-rebase.sample:	echo >&2 "$topic is fully merged to master; better remove it."
+./.git/hooks/pre-rebase.sample:		echo >&2 "$topic is already up-to-date with master"
+./.git/hooks/prepare-commit-msg.sample:# grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"
+./.git/hooks/update.sample:	echo "Don't run this script from the command line." >&2
+./.git/hooks/update.sample:	echo " (if you want, you could supply GIT_DIR then run" >&2
+./.git/hooks/update.sample:	echo "  $0 <ref> <oldrev> <newrev>)" >&2
+./.git/hooks/update.sample:	echo "usage: $0 <ref> <oldrev> <newrev>" >&2
+./.git/hooks/update.sample:	echo "*** Project description file hasn't been set" >&2
+./.git/hooks/update.sample:			echo "*** The un-annotated tag, $short_refname, is not allowed in this repository" >&2
+./.git/hooks/update.sample:			echo "*** Use 'git tag [ -a | -s ]' for tags you want to propagate." >&2
+./.git/hooks/update.sample:			echo "*** Deleting a tag is not allowed in this repository" >&2
+./.git/hooks/update.sample:			echo "*** Tag '$refname' already exists." >&2
+./.git/hooks/update.sample:			echo "*** Modifying a tag is not allowed in this repository." >&2
+./.git/hooks/update.sample:			echo "*** Creating a branch is not allowed in this repository" >&2
+./.git/hooks/update.sample:			echo "*** Deleting a branch is not allowed in this repository" >&2
+./.git/hooks/update.sample:			echo "*** Deleting a tracking branch is not allowed in this repository" >&2
+./.git/hooks/update.sample:		echo "*** Update hook: unknown type of update to ref $refname of type $newrev_type" >&2
+./Assign2/README.md:https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
+./changes.log: echo "Adding changes to log"
+./changes.log:+echo -e "\n\n${Green}New and Modified${White}" > changes.log
+./changes.log:+echo -e "\n\n${Green}Removed files:${White}" >> changes.log
+./changes.log:+echo -e "\n\n${Green}Changed code:${White}" >> changes.log
+./changes.log:-echo "Creating working tree log"
+./changes.log: echo "Adding changes to log"
+./changes.log:+echo -e "\n\n${Green}New and Modified${White}" > changes.log
+./changes.log:+echo -e "\n\n${Green}Removed files:${White}" >> changes.log
+./changes.log:+echo -e "\n\n${Green}Changed code:${White}" >> changes.log
+./changes.log: echo "Creating working tree log"
+./changes.log:+	echo "What tag should I look for?"
+./changes.log:         echo "Please enter a file name"
+./exist:	echo "File found"
+./exist:	echo "File not found"
+./funScr:echo "Root directory is set to: ${Home}"
+./funScr:    echo -e "${stuffToDo}${Format}[OK]${White}"
+./funScr:echo "Adding changes to log"
+./funScr:echo -e "\n\n${Green}New and Modified${White}" > changes.log
+./funScr:echo -e "\n\n${Green}Removed files:${White}" >> changes.log
+./funScr:echo -e "\n\n${Green}Changed code:${White}" >> changes.log
+./funScr:	echo "Please enter a file name"
+./funScr:	echo "Enter default text"
+./funScr:		echo "Creating file ${fileName} in ${targetDir}"
+./funScr:			echo ${defaultText} >> ${fileName}
+./funScr:			echo ${defaultText} > ${fileName}
+./funScr:echo "Staring Add Files"
+./funScr:        			echo "Adding $(basename "$stuffToAdd") in ${inDir}"
+./funScr:        			echo "Found #ignore tag: $(basename "$stuffToAdd") ignored"
+./funScr:echo "Starting remove files"
+./funScr:echo -e "\n\n\nUpdated git status"
+./funScr:echo "---------------------------------"
+./funScr:			echo "Sending commit with message ${2}"
+./funScr:	echo "Sending commit with default message"
+./funScr:echo "Entering Interpreted Mode"
+./funScr:echo "Type \"helpPage\" for help"
+./funScr:	echo "Enter a command:"
+./testScr:echo "Root directory is set to: ${Home}"
+./testScr:        	echo -e "${stuffToDo}${Format}[OK]${White}"
+./testScr:echo "Adding changes to log"
+./testScr:echo -e "\n\n${Green}New and Modified${White}" > changes.log
+./testScr:echo -e "\n\n${Green}Removed files:${White}" >> changes.log
+./testScr:echo -e "\n\n${Green}Changed code:${White}" >> changes.log
+./testScr:echo "Creating working tree log"
+./testScr:	echo "What tag should I look for?"
+./testScr:        echo "Please enter a file name"
+./testScr:        echo "Enter default text"
+./testScr:                echo "Creating file ${fileName} in ${targetDir}"
+./testScr:			echo ${defaultText} >> ${fileName}
+./testScr:                	echo ${defaultText} > ${fileName}
+./testScr:	echo "Staring Add Files"
+./testScr:						echo "Adding $(basename "$stuffToAdd") in ${inDir}"
+./testScr:						echo "Found #ignore tag: $(basename "$stuffToAdd") ignored"
+./testScr:	echo "Starting remove files"
+./testScr:echo -e "\n\n\nUpdated git status (To Update please use the -u flag)"
+./testScr:echo "---------------------------------"
+./testScr:                echo "Sending commit with message ${2}"
+./testScr:		echo "Sending commit with default message"

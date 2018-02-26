@@ -33,12 +33,24 @@ fi
 
 git status
 echo "Adding changes to log"
-git status | grep "modified" > changes.log
+echo -e "\n\n${Green}New and Modified${White}" > changes.log #Overwrites the old log file
+git status -s | grep "?? \| M " | sed 's/.\{3\}//' >> changes.log
+echo -e "\n\n${Green}Removed files:${White}" >> changes.log
+git status -s | grep " D " | sed 's/.\{3\}//' >> changes.log
+echo -e "\n\n${Green}Changed code:${White}" >> changes.log
+git diff >> changes.log
 grep --exclude="todo.log" -r "#ToDo" . > todo.log
 find . -name "*.hs" | xargs ghc -fno-code > error.log
 
 echo "Creating working tree log"
 find -type d | sed "/git/d" > workingTree.log
+
+if [[ $1 == *"s"* ]]
+then
+	echo "What tag should I look for?"
+	read toFind
+	grep --exclude="$toFind" -r "$toFind" . > $toFind
+fi
 
 if [[ $1 == *"d"* ]]
 then
