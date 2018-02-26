@@ -109,7 +109,7 @@ then
 	done
 fi
 
-echo -e "\n\n\nUpdated git status (To Update please use the -u flag)"
+echo -e "\n\n\nUpdated git status (To Update please use the -u flag)"		#All code that changes files should be above here
 echo "---------------------------------"
 git status
 
