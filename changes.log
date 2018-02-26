@@ -2,117 +2,131 @@
 
 [0;32mNew and Modified[1;37m
 changes.log
-funScr
-testScr
-todo.log
-adsfd
-echo
-startUpStuff
 
 
 [0;32mRemoved files:[1;37m
-mMap
 
 
 [0;32mChanged code:[1;37m
 diff --git a/changes.log b/changes.log
-index 5aa6827..502ad4d 100644
+index 55bd977..2f1c262 100644
 --- a/changes.log
 +++ b/changes.log
-@@ -1 +1,17 @@
--	modified:   changes.log
-+
-+
-+[0;32mNew and Modified[1;37m
-+changes.log
-+funScr
-+testScr
-+todo.log
-+adsfd
-+echo
-+startUpStuff
-+
-+
-+[0;32mRemoved files:[1;37m
-+mMap
-+
-+
-+[0;32mChanged code:[1;37m
-diff --git a/funScr b/funScr
-index c57c575..a28f6f9 100644
---- a/funScr
-+++ b/funScr
-@@ -28,11 +28,14 @@ function mainStuff
- {
- git status
- echo "Adding changes to log"
--git status | grep "modified" > changes.log
-+echo -e "\n\n${Green}New and Modified${White}" > changes.log
-+git status -s | grep "?? \| M " | sed 's/.\{3\}//' >> changes.log
-+echo -e "\n\n${Green}Removed files:${White}" >> changes.log
-+git status -s | grep " D " | sed 's/.\{3\}//' >> changes.log
-+echo -e "\n\n${Green}Changed code:${White}" >> changes.log
-+git diff >> changes.log
- grep --exclude="todo.log" -r "#ToDo" . > todo.log
- find . -name "*.hs" | xargs ghc -fno-code > error.log
--echo "Creating working tree log"
--find -type d | sed "/git/d" > workingTree.log
- }
+@@ -2,117 +2,9 @@
+ 
+ [0;32mNew and Modified[1;37m
+ changes.log
+-funScr
+-testScr
+-todo.log
+-adsfd
+-echo
+-startUpStuff
  
  
-diff --git a/mMap b/mMap
-deleted file mode 100644
-index e69de29..0000000
-diff --git a/testScr b/testScr
-index 18d34d2..dab3928 100755
---- a/testScr
-+++ b/testScr
-@@ -33,13 +33,25 @@ fi
+ [0;32mRemoved files:[1;37m
+-mMap
  
- git status
- echo "Adding changes to log"
--git status | grep "modified" > changes.log
-+echo -e "\n\n${Green}New and Modified${White}" > changes.log #Overwrites the old log file
-+git status -s | grep "?? \| M " | sed 's/.\{3\}//' >> changes.log
-+echo -e "\n\n${Green}Removed files:${White}" >> changes.log
-+git status -s | grep " D " | sed 's/.\{3\}//' >> changes.log
-+echo -e "\n\n${Green}Changed code:${White}" >> changes.log
-+git diff >> changes.log
- grep --exclude="todo.log" -r "#ToDo" . > todo.log
- find . -name "*.hs" | xargs ghc -fno-code > error.log
  
- echo "Creating working tree log"
- find -type d | sed "/git/d" > workingTree.log
- 
-+if [[ $1 == *"s"* ]]
-+then
-+	echo "What tag should I look for?"
-+	read toFind
-+	grep --exclude="$toFind" -r "$toFind" . > $toFind
-+fi
-+
- if [[ $1 == *"d"* ]]
- then
-         echo "Please enter a file name"
-diff --git a/todo.log b/todo.log
-index b8d32d4..67f5d35 100644
---- a/todo.log
-+++ b/todo.log
-@@ -1,3 +1,17 @@
-+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
-+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
-+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
-+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
-+./changes.log:+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
-+./changes.log:+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
-+./changes.log:+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
-+./changes.log:+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
-+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
-+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
-+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
-+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
-+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
-+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
- ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
- ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
- ./Labs/Bash01/ToDo:#ToDo add some stuff
+ [0;32mChanged code:[1;37m
+-diff --git a/changes.log b/changes.log
+-index 5aa6827..502ad4d 100644
+---- a/changes.log
+-+++ b/changes.log
+-@@ -1 +1,17 @@
+--	modified:   changes.log
+-+
+-+
+-+[0;32mNew and Modified[1;37m
+-+changes.log
+-+funScr
+-+testScr
+-+todo.log
+-+adsfd
+-+echo
+-+startUpStuff
+-+
+-+
+-+[0;32mRemoved files:[1;37m
+-+mMap
+-+
+-+
+-+[0;32mChanged code:[1;37m
+-diff --git a/funScr b/funScr
+-index c57c575..a28f6f9 100644
+---- a/funScr
+-+++ b/funScr
+-@@ -28,11 +28,14 @@ function mainStuff
+- {
+- git status
+- echo "Adding changes to log"
+--git status | grep "modified" > changes.log
+-+echo -e "\n\n${Green}New and Modified${White}" > changes.log
+-+git status -s | grep "?? \| M " | sed 's/.\{3\}//' >> changes.log
+-+echo -e "\n\n${Green}Removed files:${White}" >> changes.log
+-+git status -s | grep " D " | sed 's/.\{3\}//' >> changes.log
+-+echo -e "\n\n${Green}Changed code:${White}" >> changes.log
+-+git diff >> changes.log
+- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+- find . -name "*.hs" | xargs ghc -fno-code > error.log
+--echo "Creating working tree log"
+--find -type d | sed "/git/d" > workingTree.log
+- }
+- 
+- 
+-diff --git a/mMap b/mMap
+-deleted file mode 100644
+-index e69de29..0000000
+-diff --git a/testScr b/testScr
+-index 18d34d2..dab3928 100755
+---- a/testScr
+-+++ b/testScr
+-@@ -33,13 +33,25 @@ fi
+- 
+- git status
+- echo "Adding changes to log"
+--git status | grep "modified" > changes.log
+-+echo -e "\n\n${Green}New and Modified${White}" > changes.log #Overwrites the old log file
+-+git status -s | grep "?? \| M " | sed 's/.\{3\}//' >> changes.log
+-+echo -e "\n\n${Green}Removed files:${White}" >> changes.log
+-+git status -s | grep " D " | sed 's/.\{3\}//' >> changes.log
+-+echo -e "\n\n${Green}Changed code:${White}" >> changes.log
+-+git diff >> changes.log
+- grep --exclude="todo.log" -r "#ToDo" . > todo.log
+- find . -name "*.hs" | xargs ghc -fno-code > error.log
+- 
+- echo "Creating working tree log"
+- find -type d | sed "/git/d" > workingTree.log
+- 
+-+if [[ $1 == *"s"* ]]
+-+then
+-+	echo "What tag should I look for?"
+-+	read toFind
+-+	grep --exclude="$toFind" -r "$toFind" . > $toFind
+-+fi
+-+
+- if [[ $1 == *"d"* ]]
+- then
+-         echo "Please enter a file name"
+-diff --git a/todo.log b/todo.log
+-index b8d32d4..67f5d35 100644
+---- a/todo.log
+-+++ b/todo.log
+-@@ -1,3 +1,17 @@
+-+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+-+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+-+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+-+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+-+./changes.log:+./changes.log:+./changes.log:+./changes.log: grep --exclude="todo.log" -r "#ToDo" . > todo.log
+-+./changes.log:+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+-+./changes.log:+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+-+./changes.log:+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+-+./changes.log:+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+-+./changes.log:+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+-+./changes.log:+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+-+./changes.log: ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+-+./changes.log: ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+-+./changes.log: ./Labs/Bash01/ToDo:#ToDo add some stuff
+- ./funScr:grep --exclude="todo.log" -r "#ToDo" . > todo.log
+- ./funScr:	while read targetDir #ToDo check if file already exists. Have flag for overwrite
+- ./Labs/Bash01/ToDo:#ToDo add some stuff
