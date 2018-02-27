@@ -51,7 +51,7 @@ a -> Append new file
 If #Ignore tag is found the file will be skipped
 
 # ---------Interpreted Help--------
-helpPage 		-> Display current page
+helpPage 		-> Display help page
 
 startUp  		-> Run Startup text
 
