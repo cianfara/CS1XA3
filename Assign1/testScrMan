@@ -1,0 +1,22 @@
+-----------HELP----------
+"help" displays this page
+u -> Update tracking
+i -> Interperted
+q -> Supress start text
+c -> Commit text
+m -> Add message for commit. Must be second arg
+d -> Insert text file in all dir
+p -> Push commit
+a -> Append new file
+If #Ignore tag is found the file will be skipped
+
+---------Interperted Help--------
+helpPage 		-> Display current page
+startUp  		-> Run startup text
+mainStuff 		-> Run main code for assignment
+createDefault 		-> Create a default text file in each folder | Takes argument for append
+addFiles 		-> Add files to git tracking
+removeFiles 		-> Remove files from git tracking
+getStatus 		-> Get git status
+gitPush 		-> Push code to local git
+gitCommit 		-> Commit changes | Takes argument for optional message

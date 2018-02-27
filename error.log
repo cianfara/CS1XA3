@@ -1,6 +1,2 @@
 
-test.hs:2:1:
-    parse error (possibly incorrect indentation or mismatched brackets)
-
-test.hs:2:1:
-    parse error (possibly incorrect indentation or mismatched brackets)
+<no location info>: can't find file: test.hs
