@@ -39,7 +39,13 @@ git status -s | grep "?? \| M " | sed 's/.\{3\}//' >> changes.log
 echo -e "\n\n${Green}Removed files:${White}" >> changes.log
 git status -s | grep " D " | sed 's/.\{3\}//' >> changes.log						#Appends actual code changes
 grep --exclude="todo.log" -r "#TODD" . > todo.log
-find . -name "*.hs" | xargs ghc -fno-code > error.log
+
+> error.log
+find . -name "*.hs" |
+while read checkHs
+do
+        ghc -fno-code $(basename "$checkHs") 2>> error.log       				       #Copies just the error. Use &>> for both the error and regular output
+done
 
 echo "Creating working tree log"
 find -type d | sed "/git/d" > workingTree.log								#Sed here removes any hidden git folders

@@ -35,7 +35,13 @@ git status -s | grep " D " | sed 's/.\{3\}//' >> changes.log
 echo -e "\n\n${Green}Changed code:${White}" >> changes.log
 git diff >> changes.log
 grep --exclude="todo.log" -r "#TODO" . > todo.log
-find . -name "*.hs" | xargs ghc -fno-code > error.log
+
+> error.log
+find . -name "*.hs" |
+while read checkHs
+do
+        ghc -fno-code $(basename "$checkHs") 2>> error.log              #Copies just the error. Use &>> for both the error and regular output
+done
 }
 
 

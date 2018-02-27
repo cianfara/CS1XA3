@@ -1,1 +1,6 @@
-[1 of 1] Compiling Main             ( Labs/Haskell01/test.hs, nothing )
+
+test.hs:2:1:
+    parse error (possibly incorrect indentation or mismatched brackets)
+
+test.hs:2:1:
+    parse error (possibly incorrect indentation or mismatched brackets)
