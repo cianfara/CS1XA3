@@ -1,2 +1,1 @@
-
-<no location info>: can't find file: test.hs
+./ProjectAnalyze.sh: line 47: ghc: command not found
