@@ -1,6 +1,0 @@
-> error.log
-find . -name "*.hs" |
-while read checkHs
-do
-	ghc -fno-code $(basename "$checkHs") 2>> error.log 		#Copies just the error. Use &>> for both the error and regular output
-done
