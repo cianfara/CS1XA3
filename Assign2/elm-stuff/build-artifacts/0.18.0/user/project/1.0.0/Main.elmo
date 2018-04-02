@@ -1,0 +1,750 @@
+var _user$project$Main$getHeight = function (size) {
+	return _elm_lang$core$Basics$toFloat(size.height);
+};
+var _user$project$Main$getWidth = function (size) {
+	return _elm_lang$core$Basics$toFloat(size.width);
+};
+var _user$project$Main$wrapStuffFive = function (_p0) {
+	var _p1 = _p0;
+	var _p2 = _p1._0;
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$toFloat(_p2.dangerFive.x),
+		_p2.borderDims.x) < 0) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p2,
+			{
+				dangerFive: {
+					x: 1000,
+					y: _elm_lang$core$Basics$round(_p2.borderDims.y) + (_p2.randomNumb * 50)
+				}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p2, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$wrapStuffFour = function (_p3) {
+	var _p4 = _p3;
+	var _p5 = _p4._0;
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$toFloat(_p5.dangerFour.x),
+		_p5.borderDims.x) < 0) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p5,
+			{
+				dangerFour: {
+					x: 1000,
+					y: _elm_lang$core$Basics$round(_p5.borderDims.y) + (_p5.randomNumb * 60)
+				}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p5, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$wrapStuffThree = function (_p6) {
+	var _p7 = _p6;
+	var _p8 = _p7._0;
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$toFloat(_p8.dangerThree.x),
+		_p8.borderDims.x) < 0) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p8,
+			{
+				dangerThree: {
+					x: 1000,
+					y: _elm_lang$core$Basics$round(_p8.borderDims.y) + (_p8.randomNumb * 60)
+				}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p8, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$wrapStuffTwo = function (_p9) {
+	var _p10 = _p9;
+	var _p11 = _p10._0;
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$toFloat(_p11.dangerTwo.x),
+		_p11.borderDims.x) < 0) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p11,
+			{
+				dangerTwo: {
+					x: 1000,
+					y: _elm_lang$core$Basics$round(_p11.borderDims.y) + (_p11.randomNumb * 60)
+				}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p11, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$wrapStuff = function (_p12) {
+	var _p13 = _p12;
+	var _p14 = _p13._0;
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$toFloat(_p14.dangerOne.x),
+		_p14.borderDims.x) < 0) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p14,
+			{
+				dangerOne: {
+					x: 1000,
+					y: _elm_lang$core$Basics$round(_p14.borderDims.y) + (_p14.randomNumb * 60)
+				}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p14, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$updateBorderDims = function (_p15) {
+	var _p16 = _p15;
+	var _p17 = _p16._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p17,
+			{
+				borderDims: {
+					x: _user$project$Main$getWidth(_p17.dimensions) / 7,
+					y: _user$project$Main$getHeight(_p17.dimensions) / 50
+				}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$wrapCmd = function (model) {
+	return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$moveStuffFive = function (_p18) {
+	var _p19 = _p18;
+	var _p20 = _p19._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p20,
+			{
+				dangerFive: {x: _p20.dangerFive.x - 4, y: _p20.dangerFive.y}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$moveStuffFour = function (_p21) {
+	var _p22 = _p21;
+	var _p23 = _p22._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p23,
+			{
+				dangerFour: {x: _p23.dangerFour.x - 4, y: _p23.dangerFour.y}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$moveStuffThree = function (_p24) {
+	var _p25 = _p24;
+	var _p26 = _p25._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p26,
+			{
+				dangerThree: {x: _p26.dangerThree.x - 4, y: _p26.dangerThree.y}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$moveStuffTwo = function (_p27) {
+	var _p28 = _p27;
+	var _p29 = _p28._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p29,
+			{
+				dangerTwo: {x: _p29.dangerTwo.x - 4, y: _p29.dangerTwo.y}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$moveStuff = function (_p30) {
+	var _p31 = _p30;
+	var _p32 = _p31._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p32,
+			{
+				dangerOne: {x: _p32.dangerOne.x - 4, y: _p32.dangerOne.y}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$checkHitFive = function (_p33) {
+	var _p34 = _p33;
+	var _p35 = _p34._0;
+	return ((_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p35.position.x) - _p35.dangerFive.x),
+		70) < 0) && (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p35.position.y) - _p35.dangerFive.y),
+		30) < 0)) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p35,
+			{gameState: 2}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p35, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$checkHitFour = function (_p36) {
+	var _p37 = _p36;
+	var _p38 = _p37._0;
+	return ((_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p38.position.x) - _p38.dangerFour.x),
+		70) < 0) && (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p38.position.y) - _p38.dangerFour.y),
+		30) < 0)) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p38,
+			{gameState: 2}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p38, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$checkHitThree = function (_p39) {
+	var _p40 = _p39;
+	var _p41 = _p40._0;
+	return ((_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p41.position.x) - _p41.dangerThree.x),
+		70) < 0) && (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p41.position.y) - _p41.dangerThree.y),
+		30) < 0)) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p41,
+			{gameState: 2}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p41, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$checkHitTwo = function (_p42) {
+	var _p43 = _p42;
+	var _p44 = _p43._0;
+	return ((_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p44.position.x) - _p44.dangerTwo.x),
+		70) < 0) && (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p44.position.y) - _p44.dangerTwo.y),
+		30) < 0)) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p44,
+			{gameState: 2}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p44, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$checkHit = function (_p45) {
+	var _p46 = _p45;
+	var _p47 = _p46._0;
+	return ((_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p47.position.x) - _p47.dangerOne.x),
+		70) < 0) && (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p47.position.y) - _p47.dangerOne.y),
+		30) < 0)) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p47,
+			{gameState: 2}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p47, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$movePlayer = function (_p48) {
+	var _p49 = _p48;
+	var _p50 = _p49._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p50,
+			{
+				position: {x: _p50.position.x, y: _p50.position.y + _p50.momentium}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$gravity = function (_p51) {
+	var _p52 = _p51;
+	var _p53 = _p52._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p53,
+			{momentium: _p53.momentium + 0.25}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$checkPlayer = function (_p54) {
+	var _p55 = _p54;
+	var _p56 = _p55._0;
+	return ((_elm_lang$core$Native_Utils.cmp(_p56.position.x, _p56.borderDims.x) < 0) || ((_elm_lang$core$Native_Utils.cmp(_p56.position.x, _p56.borderDims.x + 1000) > 0) || ((_elm_lang$core$Native_Utils.cmp(_p56.position.y, _p56.borderDims.y) < 0) || (_elm_lang$core$Native_Utils.cmp(_p56.position.y, _p56.borderDims.y + 700) > 0)))) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p56,
+			{gameState: 2}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p56, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$updateScore = function (_p57) {
+	var _p58 = _p57;
+	var _p59 = _p58._0;
+	return _elm_lang$core$Native_Utils.eq(_p59.gameState, 1) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p59,
+			{myScore: _p59.myScore + 0.25}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p59, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$timeTick = function (model) {
+	return _user$project$Main$checkPlayer(
+		_user$project$Main$movePlayer(
+			_user$project$Main$gravity(
+				_user$project$Main$checkHitFive(
+					_user$project$Main$checkHitFour(
+						_user$project$Main$checkHitThree(
+							_user$project$Main$checkHitTwo(
+								_user$project$Main$checkHit(
+									_user$project$Main$wrapStuffFive(
+										_user$project$Main$wrapStuffFour(
+											_user$project$Main$wrapStuffThree(
+												_user$project$Main$wrapStuffTwo(
+													_user$project$Main$wrapStuff(
+														_user$project$Main$moveStuffFive(
+															_user$project$Main$moveStuffFour(
+																_user$project$Main$moveStuffThree(
+																	_user$project$Main$moveStuffTwo(
+																		_user$project$Main$updateScore(
+																			_user$project$Main$moveStuff(
+																				_user$project$Main$updateBorderDims(
+																					_user$project$Main$wrapCmd(model)))))))))))))))))))));
+};
+var _user$project$Main$emptyBox = 'fill:none;stroke:black;stroke-width:5;opacity:0.1';
+var _user$project$Main$myHeight = '30';
+var _user$project$Main$myWidth = '70';
+var _user$project$Main$view = function (model) {
+	var moveTo = _elm_lang$core$Basics$toString(
+		_elm_lang$core$Basics$toString(model.myTime.currentTime));
+	var posY = _elm_lang$core$Basics$toString(model.position.y);
+	var posX = _elm_lang$core$Basics$toString(model.position.x);
+	return _elm_lang$core$Native_Utils.eq(model.gameState, 2) ? A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$align('center'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h1,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							'Your final score was: ',
+							_elm_lang$core$Basics$toString(model.myScore))),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$p,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('Press F5 to try again!'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			}
+		}) : A2(
+		_elm_lang$svg$Svg$svg,
+		{
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Attributes$width('1250'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$height('750'),
+				_1: {ctor: '[]'}
+			}
+		},
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			{ctor: '[]'},
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$svg$Svg$rect,
+						{
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$x(posX),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$y(posY),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$fill('red'),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {ctor: '[]'}
+				},
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$svg$Svg$rect,
+							{
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$x(
+									_elm_lang$core$Basics$toString(model.dangerOne.x)),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$y(
+										_elm_lang$core$Basics$toString(model.dangerOne.y)),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$svg$Svg_Attributes$fill('blue'),
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {ctor: '[]'}
+					},
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$svg$Svg$rect,
+								{
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$x(
+										_elm_lang$core$Basics$toString(model.dangerTwo.x)),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$y(
+											_elm_lang$core$Basics$toString(model.dangerTwo.y)),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$svg$Svg_Attributes$fill('blue'),
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								},
+								{ctor: '[]'}),
+							_1: {ctor: '[]'}
+						},
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$svg$Svg$rect,
+									{
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$x(
+											_elm_lang$core$Basics$toString(model.dangerThree.x)),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$y(
+												_elm_lang$core$Basics$toString(model.dangerThree.y)),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
+													_1: {
+														ctor: '::',
+														_0: _elm_lang$svg$Svg_Attributes$fill('blue'),
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									},
+									{ctor: '[]'}),
+								_1: {ctor: '[]'}
+							},
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								{
+									ctor: '::',
+									_0: A2(
+										_elm_lang$svg$Svg$rect,
+										{
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$x(
+												_elm_lang$core$Basics$toString(model.dangerFour.x)),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$svg$Svg_Attributes$y(
+													_elm_lang$core$Basics$toString(model.dangerFour.y)),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
+													_1: {
+														ctor: '::',
+														_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$svg$Svg_Attributes$fill('blue'),
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										},
+										{ctor: '[]'}),
+									_1: {ctor: '[]'}
+								},
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									{
+										ctor: '::',
+										_0: A2(
+											_elm_lang$svg$Svg$rect,
+											{
+												ctor: '::',
+												_0: _elm_lang$svg$Svg_Attributes$x(
+													_elm_lang$core$Basics$toString(model.dangerFive.x)),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$svg$Svg_Attributes$y(
+														_elm_lang$core$Basics$toString(model.dangerFive.y)),
+													_1: {
+														ctor: '::',
+														_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$svg$Svg_Attributes$fill('blue'),
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											},
+											{ctor: '[]'}),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: A2(
+											_elm_lang$svg$Svg$rect,
+											{
+												ctor: '::',
+												_0: _elm_lang$svg$Svg_Attributes$x(
+													_elm_lang$core$Basics$toString(model.borderDims.x)),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$svg$Svg_Attributes$y(
+														_elm_lang$core$Basics$toString(model.borderDims.y)),
+													_1: {
+														ctor: '::',
+														_0: _elm_lang$svg$Svg_Attributes$width('1000'),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$svg$Svg_Attributes$height('700'),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$svg$Svg_Attributes$style(_user$project$Main$emptyBox),
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											},
+											{ctor: '[]'}),
+										_1: {ctor: '[]'}
+									}))))))));
+};
+var _user$project$Main$full = '100%';
+var _user$project$Main$Model = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return function (k) {
+											return function (l) {
+												return function (m) {
+													return {position: a, myTime: b, dangerOne: c, dangerTwo: d, dangerThree: e, dangerFour: f, dangerFive: g, borderDims: h, randomNumb: i, dimensions: j, gameState: k, momentium: l, myScore: m};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Main$Click = {ctor: 'Click'};
+var _user$project$Main$SizeUpdated = function (a) {
+	return {ctor: 'SizeUpdated', _0: a};
+};
+var _user$project$Main$init = {
+	ctor: '_Tuple2',
+	_0: {
+		position: {x: 300, y: 300},
+		myTime: {currentTime: 0},
+		dangerOne: {x: 1100, y: 200},
+		dangerTwo: {x: 700, y: 300},
+		dangerThree: {x: 800, y: 400},
+		dangerFour: {x: 600, y: 200},
+		dangerFive: {x: 850, y: 500},
+		borderDims: {x: 220, y: 15},
+		randomNumb: 0,
+		dimensions: A2(_elm_lang$window$Window$Size, 0, 0),
+		gameState: 1,
+		momentium: 0,
+		myScore: 0
+	},
+	_1: A2(_elm_lang$core$Task$perform, _user$project$Main$SizeUpdated, _elm_lang$window$Window$size)
+};
+var _user$project$Main$windowDimensionsChanged = _elm_lang$window$Window$resizes(_user$project$Main$SizeUpdated);
+var _user$project$Main$OnResult = function (a) {
+	return {ctor: 'OnResult', _0: a};
+};
+var _user$project$Main$update = F2(
+	function (msg, model) {
+		var _p60 = msg;
+		switch (_p60.ctor) {
+			case 'KeyMsg':
+				var _p61 = _p60._0;
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{momentium: model.momentium - 4}),
+					_1: A2(
+						_elm_lang$core$Random$generate,
+						_user$project$Main$OnResult,
+						A2(_elm_lang$core$Random$int, 0, 10))
+				};
+			case 'Tick':
+				return _user$project$Main$timeTick(model);
+			case 'Roll':
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: A2(
+						_elm_lang$core$Random$generate,
+						_user$project$Main$OnResult,
+						A2(_elm_lang$core$Random$int, 0, 10))
+				};
+			case 'OnResult':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{randomNumb: _p60._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'SizeUpdated':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{dimensions: _p60._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			default:
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{gameState: 1}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+		}
+	});
+var _user$project$Main$Roll = {ctor: 'Roll'};
+var _user$project$Main$updateRandom = function (_p62) {
+	var _p63 = _p62;
+	return A2(_user$project$Main$update, _user$project$Main$Roll, _p63._0);
+};
+var _user$project$Main$Tick = function (a) {
+	return {ctor: 'Tick', _0: a};
+};
+var _user$project$Main$KeyMsg = function (a) {
+	return {ctor: 'KeyMsg', _0: a};
+};
+var _user$project$Main$subscriptions = function (model) {
+	return _elm_lang$core$Platform_Sub$batch(
+		{
+			ctor: '::',
+			_0: _elm_lang$keyboard$Keyboard$downs(_user$project$Main$KeyMsg),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$animation_frame$AnimationFrame$times(_user$project$Main$Tick),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$mouse$Mouse$clicks(
+						function (_p64) {
+							return _user$project$Main$Click;
+						}),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _user$project$Main$main = _elm_lang$html$Html$program(
+	{init: _user$project$Main$init, update: _user$project$Main$update, view: _user$project$Main$view, subscriptions: _user$project$Main$subscriptions})();
