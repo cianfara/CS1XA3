@@ -1,9 +1,9 @@
 ./Assign1/ProjectAnalyze.sh:grep --exclude="todo.log" -r "#TODD" . > todo.log
-./changes.log:-------- grep --exclude="todo.log" -r "#TODD" . > todo.log
-./changes.log:---------+grep --exclude="todo.log" -r "#TODD" . > todo.log
-./changes.log:--------./changes.log: grep --exclude="todo.log" -r "#TODD" . > todo.log
-./changes.log:--------./changes.log:-+grep --exclude="todo.log" -r "#TODD" . > todo.log
-./changes.log:--------./ProjectAnalyze.sh:grep --exclude="todo.log" -r "#TODD" . > todo.log
-./changes.log:-grep --exclude="todo.log" -r "#TODD" . > todo.log
+./changes.log:--------- grep --exclude="todo.log" -r "#TODD" . > todo.log
+./changes.log:----------+grep --exclude="todo.log" -r "#TODD" . > todo.log
+./changes.log:---------./changes.log: grep --exclude="todo.log" -r "#TODD" . > todo.log
+./changes.log:---------./changes.log:-+grep --exclude="todo.log" -r "#TODD" . > todo.log
+./changes.log:---------./ProjectAnalyze.sh:grep --exclude="todo.log" -r "#TODD" . > todo.log
+./changes.log:--grep --exclude="todo.log" -r "#TODD" . > todo.log
 ./ProjectAnalyze.sh:grep --exclude="todo.log" -r "#TODD" . > todo.log
 ./update:grep --exclude="todo.log" -r "#TODD" . > todo.log
