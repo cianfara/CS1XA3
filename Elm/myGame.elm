@@ -135,19 +135,19 @@ updateRandom:( Model, Cmd Msg ) -> ( Model, Cmd Msg )
 updateRandom (model, cmd) =  (update Roll model)
 
 moveStuff:(Model, Cmd Msg) -> (Model, Cmd Msg)
-moveStuff (model,cmd) = ({model | dangerOne = {x = model.dangerOne.x - 3, y=model.dangerOne.y}}, Cmd.none)
+moveStuff (model,cmd) = ({model | dangerOne = {x = model.dangerOne.x - 4, y=model.dangerOne.y}}, Cmd.none)
 
 moveStuffTwo:(Model, Cmd Msg) -> (Model, Cmd Msg)
-moveStuffTwo (model,cmd) = ({model | dangerTwo = {x = model.dangerTwo.x - 3, y=model.dangerTwo.y}}, Cmd.none)
+moveStuffTwo (model,cmd) = ({model | dangerTwo = {x = model.dangerTwo.x - 4, y=model.dangerTwo.y}}, Cmd.none)
 
 moveStuffThree:(Model, Cmd Msg) -> (Model, Cmd Msg)
-moveStuffThree (model,cmd) = ({model | dangerThree = {x = model.dangerThree.x - 3, y=model.dangerThree.y}}, Cmd.none)
+moveStuffThree (model,cmd) = ({model | dangerThree = {x = model.dangerThree.x - 4, y=model.dangerThree.y}}, Cmd.none)
 
 moveStuffFour:(Model, Cmd Msg) -> (Model, Cmd Msg)
-moveStuffFour (model,cmd) = ({model | dangerFour = {x = model.dangerFour.x - 3, y=model.dangerFour.y}}, Cmd.none)
+moveStuffFour (model,cmd) = ({model | dangerFour = {x = model.dangerFour.x - 4, y=model.dangerFour.y}}, Cmd.none)
 
 moveStuffFive:(Model, Cmd Msg) -> (Model, Cmd Msg)
-moveStuffFive (model,cmd) = ({model | dangerFive = {x = model.dangerFive.x - 3, y=model.dangerFive.y}}, Cmd.none)
+moveStuffFive (model,cmd) = ({model | dangerFive = {x = model.dangerFive.x - 4, y=model.dangerFive.y}}, Cmd.none)
 
 wrapCmd:Model -> ( Model, Cmd Msg )
 wrapCmd model = (model, Cmd.none)
@@ -158,25 +158,25 @@ updateBorderDims (model, cmd) = ({ model | borderDims = {x = (getWidth (model.di
 wrapStuff:( Model, Cmd Msg ) -> ( Model, Cmd Msg )
 wrapStuff (model, cmd) = 
     if ((toFloat model.dangerOne.x) < model.borderDims.x) 
-    then ({ model | dangerOne = {x = 1000, y = ((round model.borderDims.y) + model.randomNumb*50)}}, Cmd.none) 
+    then ({ model | dangerOne = {x = 1000, y = ((round model.borderDims.y) + model.randomNumb*60)}}, Cmd.none) 
     else (model, Cmd.none  )
 
 wrapStuffTwo:( Model, Cmd Msg ) -> ( Model, Cmd Msg )
 wrapStuffTwo (model, cmd) = 
     if ((toFloat model.dangerTwo.x) < model.borderDims.x) 
-    then ({ model | dangerTwo = {x = 1000, y = ((round model.borderDims.y) + model.randomNumb*50)}}, Cmd.none) 
+    then ({ model | dangerTwo = {x = 1000, y = ((round model.borderDims.y) + model.randomNumb*60)}}, Cmd.none) 
     else (model, Cmd.none)
 
 wrapStuffThree:( Model, Cmd Msg ) -> ( Model, Cmd Msg )
 wrapStuffThree (model, cmd) = 
     if ((toFloat model.dangerThree.x) < model.borderDims.x) 
-    then ({ model | dangerThree = {x = 1000, y = ((round model.borderDims.y) + model.randomNumb*50)}}, Cmd.none) 
+    then ({ model | dangerThree = {x = 1000, y = ((round model.borderDims.y) + model.randomNumb*60)}}, Cmd.none) 
     else (model, Cmd.none)
 
 wrapStuffFour:( Model, Cmd Msg ) -> ( Model, Cmd Msg )
 wrapStuffFour (model, cmd) = 
     if ((toFloat model.dangerFour.x) < model.borderDims.x) 
-    then ({ model | dangerFour = {x = 1000, y = ((round model.borderDims.y) + model.randomNumb*50)}}, Cmd.none) 
+    then ({ model | dangerFour = {x = 1000, y = ((round model.borderDims.y) + model.randomNumb*60)}}, Cmd.none) 
     else (model, Cmd.none)
 
 wrapStuffFive:( Model, Cmd Msg ) -> ( Model, Cmd Msg )
@@ -191,16 +191,14 @@ view model = let
         posY = toString model.position.y
         moveTo = toString ((toString model.myTime.currentTime))
     in 
-    if (model.gameState == 0) then
-        svg [width full, height full]  [image [x "0", y "0", width "700", height "700", Svg.Attributes.xlinkHref "./start.png"][]]
-    else if (model.gameState == 2)
+    if (model.gameState == 2)
     then
          div [Attr.align "center"]
          [ h1 [] [Html.text ("Your final score was: " ++ (toString model.myScore))]
          , p [] [Html.text "Press F5 to try again!"]
          ]
     else
-           svg [width full, height full]  
+           svg [width "1250", height "750"]  
             ([]
            ++ [rect [x posX, y posY, width myWidth, height myHeight, fill "red"] []] --Player box
            ++ [rect [x (toString model.dangerOne.x), y (toString model.dangerOne.y), width myWidth, height myHeight, fill "blue"][]] 

@@ -34,7 +34,7 @@ var _user$project$Main$wrapStuffFour = function (_p3) {
 			{
 				dangerFour: {
 					x: 1000,
-					y: _elm_lang$core$Basics$round(_p5.borderDims.y) + (_p5.randomNumb * 50)
+					y: _elm_lang$core$Basics$round(_p5.borderDims.y) + (_p5.randomNumb * 60)
 				}
 			}),
 		_1: _elm_lang$core$Platform_Cmd$none
@@ -52,7 +52,7 @@ var _user$project$Main$wrapStuffThree = function (_p6) {
 			{
 				dangerThree: {
 					x: 1000,
-					y: _elm_lang$core$Basics$round(_p8.borderDims.y) + (_p8.randomNumb * 50)
+					y: _elm_lang$core$Basics$round(_p8.borderDims.y) + (_p8.randomNumb * 60)
 				}
 			}),
 		_1: _elm_lang$core$Platform_Cmd$none
@@ -70,7 +70,7 @@ var _user$project$Main$wrapStuffTwo = function (_p9) {
 			{
 				dangerTwo: {
 					x: 1000,
-					y: _elm_lang$core$Basics$round(_p11.borderDims.y) + (_p11.randomNumb * 50)
+					y: _elm_lang$core$Basics$round(_p11.borderDims.y) + (_p11.randomNumb * 60)
 				}
 			}),
 		_1: _elm_lang$core$Platform_Cmd$none
@@ -88,7 +88,7 @@ var _user$project$Main$wrapStuff = function (_p12) {
 			{
 				dangerOne: {
 					x: 1000,
-					y: _elm_lang$core$Basics$round(_p14.borderDims.y) + (_p14.randomNumb * 50)
+					y: _elm_lang$core$Basics$round(_p14.borderDims.y) + (_p14.randomNumb * 60)
 				}
 			}),
 		_1: _elm_lang$core$Platform_Cmd$none
@@ -121,7 +121,7 @@ var _user$project$Main$moveStuffFive = function (_p18) {
 		_0: _elm_lang$core$Native_Utils.update(
 			_p20,
 			{
-				dangerFive: {x: _p20.dangerFive.x - 3, y: _p20.dangerFive.y}
+				dangerFive: {x: _p20.dangerFive.x - 4, y: _p20.dangerFive.y}
 			}),
 		_1: _elm_lang$core$Platform_Cmd$none
 	};
@@ -134,7 +134,7 @@ var _user$project$Main$moveStuffFour = function (_p21) {
 		_0: _elm_lang$core$Native_Utils.update(
 			_p23,
 			{
-				dangerFour: {x: _p23.dangerFour.x - 3, y: _p23.dangerFour.y}
+				dangerFour: {x: _p23.dangerFour.x - 4, y: _p23.dangerFour.y}
 			}),
 		_1: _elm_lang$core$Platform_Cmd$none
 	};
@@ -147,7 +147,7 @@ var _user$project$Main$moveStuffThree = function (_p24) {
 		_0: _elm_lang$core$Native_Utils.update(
 			_p26,
 			{
-				dangerThree: {x: _p26.dangerThree.x - 3, y: _p26.dangerThree.y}
+				dangerThree: {x: _p26.dangerThree.x - 4, y: _p26.dangerThree.y}
 			}),
 		_1: _elm_lang$core$Platform_Cmd$none
 	};
@@ -160,7 +160,7 @@ var _user$project$Main$moveStuffTwo = function (_p27) {
 		_0: _elm_lang$core$Native_Utils.update(
 			_p29,
 			{
-				dangerTwo: {x: _p29.dangerTwo.x - 3, y: _p29.dangerTwo.y}
+				dangerTwo: {x: _p29.dangerTwo.x - 4, y: _p29.dangerTwo.y}
 			}),
 		_1: _elm_lang$core$Platform_Cmd$none
 	};
@@ -173,7 +173,7 @@ var _user$project$Main$moveStuff = function (_p30) {
 		_0: _elm_lang$core$Native_Utils.update(
 			_p32,
 			{
-				dangerOne: {x: _p32.dangerOne.x - 3, y: _p32.dangerOne.y}
+				dangerOne: {x: _p32.dangerOne.x - 4, y: _p32.dangerOne.y}
 			}),
 		_1: _elm_lang$core$Platform_Cmd$none
 	};
@@ -335,51 +335,12 @@ var _user$project$Main$timeTick = function (model) {
 var _user$project$Main$emptyBox = 'fill:none;stroke:black;stroke-width:5;opacity:0.1';
 var _user$project$Main$myHeight = '30';
 var _user$project$Main$myWidth = '70';
-var _user$project$Main$full = '100%';
 var _user$project$Main$view = function (model) {
 	var moveTo = _elm_lang$core$Basics$toString(
 		_elm_lang$core$Basics$toString(model.myTime.currentTime));
 	var posY = _elm_lang$core$Basics$toString(model.position.y);
 	var posX = _elm_lang$core$Basics$toString(model.position.x);
-	return _elm_lang$core$Native_Utils.eq(model.gameState, 0) ? A2(
-		_elm_lang$svg$Svg$svg,
-		{
-			ctor: '::',
-			_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$full),
-			_1: {
-				ctor: '::',
-				_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$full),
-				_1: {ctor: '[]'}
-			}
-		},
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$svg$Svg$image,
-				{
-					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$x('0'),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$y('0'),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$width('700'),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$height('700'),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$xlinkHref('./start.png'),
-									_1: {ctor: '[]'}
-								}
-							}
-						}
-					}
-				},
-				{ctor: '[]'}),
-			_1: {ctor: '[]'}
-		}) : (_elm_lang$core$Native_Utils.eq(model.gameState, 2) ? A2(
+	return _elm_lang$core$Native_Utils.eq(model.gameState, 2) ? A2(
 		_elm_lang$html$Html$div,
 		{
 			ctor: '::',
@@ -416,10 +377,10 @@ var _user$project$Main$view = function (model) {
 		_elm_lang$svg$Svg$svg,
 		{
 			ctor: '::',
-			_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$full),
+			_0: _elm_lang$svg$Svg_Attributes$width('1250'),
 			_1: {
 				ctor: '::',
-				_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$full),
+				_0: _elm_lang$svg$Svg_Attributes$height('750'),
 				_1: {ctor: '[]'}
 			}
 		},
@@ -645,8 +606,9 @@ var _user$project$Main$view = function (model) {
 											},
 											{ctor: '[]'}),
 										_1: {ctor: '[]'}
-									})))))))));
+									}))))))));
 };
+var _user$project$Main$full = '100%';
 var _user$project$Main$Model = function (a) {
 	return function (b) {
 		return function (c) {
