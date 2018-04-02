@@ -1,0 +1,101 @@
+var _user$project$MouseExample$view = function (model) {
+	var posY = _elm_lang$core$Basics$toString(model.myShape.y);
+	var posX = _elm_lang$core$Basics$toString(model.myShape.x);
+	var myTxt = _elm_lang$html$Html$text(
+		_elm_lang$core$Basics$toString(model.position));
+	return A2(
+		_elm_lang$svg$Svg$svg,
+		{
+			ctor: '::',
+			_0: _elm_lang$svg$Svg_Attributes$width('600'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$svg$Svg_Attributes$height('600'),
+				_1: {ctor: '[]'}
+			}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$svg$Svg$rect,
+				{
+					ctor: '::',
+					_0: _elm_lang$svg$Svg_Attributes$x(posX),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$y(posY),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$width('600'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$height('600'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$fill('blue'),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				},
+				{ctor: '[]'}),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$MouseExample$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		if (_p0.ctor === 'MouseMsg') {
+			var _p1 = _p0._0;
+			return {
+				ctor: '_Tuple2',
+				_0: {
+					position: {ctor: '_Tuple2', _0: _p1.x, _1: _p1.y},
+					myShape: {x: _p1.x, y: _p1.y}
+				},
+				_1: _elm_lang$core$Platform_Cmd$none
+			};
+		} else {
+			return {
+				ctor: '_Tuple2',
+				_0: {
+					position: {ctor: '_Tuple2', _0: 0, _1: 0},
+					myShape: {x: 100, y: 100}
+				},
+				_1: _elm_lang$core$Platform_Cmd$none
+			};
+		}
+	});
+var _user$project$MouseExample$init = {
+	ctor: '_Tuple2',
+	_0: {
+		position: {ctor: '_Tuple2', _0: 0, _1: 0},
+		myShape: {x: 0, y: 0}
+	},
+	_1: _elm_lang$core$Platform_Cmd$none
+};
+var _user$project$MouseExample$Model = F2(
+	function (a, b) {
+		return {position: a, myShape: b};
+	});
+var _user$project$MouseExample$ResetMsg = function (a) {
+	return {ctor: 'ResetMsg', _0: a};
+};
+var _user$project$MouseExample$MouseMsg = function (a) {
+	return {ctor: 'MouseMsg', _0: a};
+};
+var _user$project$MouseExample$subscriptions = function (model) {
+	return _elm_lang$core$Platform_Sub$batch(
+		{
+			ctor: '::',
+			_0: _elm_lang$mouse$Mouse$moves(_user$project$MouseExample$MouseMsg),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$keyboard$Keyboard$downs(_user$project$MouseExample$ResetMsg),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$MouseExample$main = _elm_lang$html$Html$program(
+	{init: _user$project$MouseExample$init, view: _user$project$MouseExample$view, update: _user$project$MouseExample$update, subscriptions: _user$project$MouseExample$subscriptions})();

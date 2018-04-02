@@ -1,1 +1,1 @@
-./update.sh: line 47: ghc: command not found
+./update: line 47: ghc: command not found

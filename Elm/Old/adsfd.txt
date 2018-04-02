@@ -1,0 +1,2 @@
+http://www.mokacoding.com/blog/functor-applicative-monads-in-pictures/https://stackoverflow.com/questions/44965/what-is-a-monad
+https://stackoverflow.com/questions/44965/what-is-a-monad
