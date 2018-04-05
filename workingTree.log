@@ -46,6 +46,10 @@
 ./Assign2/elm-stuff/packages/elm-lang/dom/1.1.1/src
 ./Assign2/elm-stuff/packages/elm-lang/dom/1.1.1/src/Dom
 ./Assign2/elm-stuff/packages/elm-lang/dom/1.1.1/src/Native
+./Assign2/elm-stuff/packages/elm-lang/elm-audio-master
+./Assign2/elm-stuff/packages/elm-lang/elm-audio-master/src
+./Assign2/elm-stuff/packages/elm-lang/elm-audio-master/src/Native
+./Assign2/elm-stuff/packages/elm-lang/elm-audio-master/tests
 ./Assign2/elm-stuff/packages/elm-lang/html
 ./Assign2/elm-stuff/packages/elm-lang/html/2.0.0
 ./Assign2/elm-stuff/packages/elm-lang/html/2.0.0/src
@@ -56,6 +60,7 @@
 ./Assign2/elm-stuff/packages/elm-lang/mouse
 ./Assign2/elm-stuff/packages/elm-lang/mouse/1.0.1
 ./Assign2/elm-stuff/packages/elm-lang/mouse/1.0.1/src
+./Assign2/elm-stuff/packages/elm-lang/Native
 ./Assign2/elm-stuff/packages/elm-lang/svg
 ./Assign2/elm-stuff/packages/elm-lang/svg/2.0.0
 ./Assign2/elm-stuff/packages/elm-lang/svg/2.0.0/examples
@@ -73,6 +78,8 @@
 ./Assign2/elm-stuff/packages/elm-lang/window/1.0.1
 ./Assign2/elm-stuff/packages/elm-lang/window/1.0.1/src
 ./Assign2/elm-stuff/packages/elm-lang/window/1.0.1/src/Native
+./Assign2/public_html
+./Assign2/public_html/elm
 ./Assign3
 ./Elm
 ./Elm/elm-stuff
@@ -120,6 +127,10 @@
 ./Elm/elm-stuff/packages/elm-lang/dom/1.1.1/src
 ./Elm/elm-stuff/packages/elm-lang/dom/1.1.1/src/Dom
 ./Elm/elm-stuff/packages/elm-lang/dom/1.1.1/src/Native
+./Elm/elm-stuff/packages/elm-lang/elm-audio-master
+./Elm/elm-stuff/packages/elm-lang/elm-audio-master/src
+./Elm/elm-stuff/packages/elm-lang/elm-audio-master/src/Native
+./Elm/elm-stuff/packages/elm-lang/elm-audio-master/tests
 ./Elm/elm-stuff/packages/elm-lang/html
 ./Elm/elm-stuff/packages/elm-lang/html/2.0.0
 ./Elm/elm-stuff/packages/elm-lang/html/2.0.0/src
@@ -130,6 +141,7 @@
 ./Elm/elm-stuff/packages/elm-lang/mouse
 ./Elm/elm-stuff/packages/elm-lang/mouse/1.0.1
 ./Elm/elm-stuff/packages/elm-lang/mouse/1.0.1/src
+./Elm/elm-stuff/packages/elm-lang/Native
 ./Elm/elm-stuff/packages/elm-lang/svg
 ./Elm/elm-stuff/packages/elm-lang/svg/2.0.0
 ./Elm/elm-stuff/packages/elm-lang/svg/2.0.0/examples
@@ -147,6 +159,7 @@
 ./Elm/elm-stuff/packages/elm-lang/window/1.0.1
 ./Elm/elm-stuff/packages/elm-lang/window/1.0.1/src
 ./Elm/elm-stuff/packages/elm-lang/window/1.0.1/src/Native
+./Elm/Native
 ./Elm/Old
 ./Labs
 ./Labs/Bash01

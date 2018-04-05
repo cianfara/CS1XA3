@@ -4,474 +4,95 @@ var _user$project$Main$getHeight = function (size) {
 var _user$project$Main$getWidth = function (size) {
 	return _elm_lang$core$Basics$toFloat(size.width);
 };
-var _user$project$Main$wrapStuffFive = function (_p0) {
-	var _p1 = _p0;
-	var _p2 = _p1._0;
-	return (_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$toFloat(_p2.dangerFive.x),
-		_p2.borderDims.x) < 0) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p2,
-			{
-				dangerFive: {
-					x: 1000,
-					y: _elm_lang$core$Basics$round(_p2.borderDims.y) + (_p2.randomNumb * 50)
-				}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p2, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$wrapStuffFour = function (_p3) {
-	var _p4 = _p3;
-	var _p5 = _p4._0;
-	return (_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$toFloat(_p5.dangerFour.x),
-		_p5.borderDims.x) < 0) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p5,
-			{
-				dangerFour: {
-					x: 1000,
-					y: _elm_lang$core$Basics$round(_p5.borderDims.y) + (_p5.randomNumb * 60)
-				}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p5, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$wrapStuffThree = function (_p6) {
-	var _p7 = _p6;
-	var _p8 = _p7._0;
-	return (_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$toFloat(_p8.dangerThree.x),
-		_p8.borderDims.x) < 0) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p8,
-			{
-				dangerThree: {
-					x: 1000,
-					y: _elm_lang$core$Basics$round(_p8.borderDims.y) + (_p8.randomNumb * 60)
-				}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p8, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$wrapStuffTwo = function (_p9) {
-	var _p10 = _p9;
-	var _p11 = _p10._0;
-	return (_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$toFloat(_p11.dangerTwo.x),
-		_p11.borderDims.x) < 0) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p11,
-			{
-				dangerTwo: {
-					x: 1000,
-					y: _elm_lang$core$Basics$round(_p11.borderDims.y) + (_p11.randomNumb * 60)
-				}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p11, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$wrapStuff = function (_p12) {
-	var _p13 = _p12;
-	var _p14 = _p13._0;
-	return (_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$toFloat(_p14.dangerOne.x),
-		_p14.borderDims.x) < 0) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p14,
-			{
-				dangerOne: {
-					x: 1000,
-					y: _elm_lang$core$Basics$round(_p14.borderDims.y) + (_p14.randomNumb * 60)
-				}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p14, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$updateBorderDims = function (_p15) {
-	var _p16 = _p15;
-	var _p17 = _p16._0;
-	return {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p17,
-			{
-				borderDims: {
-					x: _user$project$Main$getWidth(_p17.dimensions) / 7,
-					y: _user$project$Main$getHeight(_p17.dimensions) / 50
-				}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	};
-};
-var _user$project$Main$wrapCmd = function (model) {
-	return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$moveStuffFive = function (_p18) {
-	var _p19 = _p18;
-	var _p20 = _p19._0;
-	return {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p20,
-			{
-				dangerFive: {x: _p20.dangerFive.x - 4, y: _p20.dangerFive.y}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	};
-};
-var _user$project$Main$moveStuffFour = function (_p21) {
-	var _p22 = _p21;
-	var _p23 = _p22._0;
-	return {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p23,
-			{
-				dangerFour: {x: _p23.dangerFour.x - 4, y: _p23.dangerFour.y}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	};
-};
-var _user$project$Main$moveStuffThree = function (_p24) {
-	var _p25 = _p24;
-	var _p26 = _p25._0;
-	return {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p26,
-			{
-				dangerThree: {x: _p26.dangerThree.x - 4, y: _p26.dangerThree.y}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	};
-};
-var _user$project$Main$moveStuffTwo = function (_p27) {
-	var _p28 = _p27;
-	var _p29 = _p28._0;
-	return {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p29,
-			{
-				dangerTwo: {x: _p29.dangerTwo.x - 4, y: _p29.dangerTwo.y}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	};
-};
-var _user$project$Main$moveStuff = function (_p30) {
-	var _p31 = _p30;
-	var _p32 = _p31._0;
-	return {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p32,
-			{
-				dangerOne: {x: _p32.dangerOne.x - 4, y: _p32.dangerOne.y}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	};
-};
-var _user$project$Main$checkHitFive = function (_p33) {
-	var _p34 = _p33;
-	var _p35 = _p34._0;
-	return ((_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$abs(
-			_elm_lang$core$Basics$round(_p35.position.x) - _p35.dangerFive.x),
-		70) < 0) && (_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$abs(
-			_elm_lang$core$Basics$round(_p35.position.y) - _p35.dangerFive.y),
-		30) < 0)) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p35,
-			{gameState: 2}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p35, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$checkHitFour = function (_p36) {
-	var _p37 = _p36;
-	var _p38 = _p37._0;
-	return ((_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$abs(
-			_elm_lang$core$Basics$round(_p38.position.x) - _p38.dangerFour.x),
-		70) < 0) && (_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$abs(
-			_elm_lang$core$Basics$round(_p38.position.y) - _p38.dangerFour.y),
-		30) < 0)) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p38,
-			{gameState: 2}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p38, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$checkHitThree = function (_p39) {
-	var _p40 = _p39;
-	var _p41 = _p40._0;
-	return ((_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$abs(
-			_elm_lang$core$Basics$round(_p41.position.x) - _p41.dangerThree.x),
-		70) < 0) && (_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$abs(
-			_elm_lang$core$Basics$round(_p41.position.y) - _p41.dangerThree.y),
-		30) < 0)) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p41,
-			{gameState: 2}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p41, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$checkHitTwo = function (_p42) {
-	var _p43 = _p42;
-	var _p44 = _p43._0;
-	return ((_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$abs(
-			_elm_lang$core$Basics$round(_p44.position.x) - _p44.dangerTwo.x),
-		70) < 0) && (_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$abs(
-			_elm_lang$core$Basics$round(_p44.position.y) - _p44.dangerTwo.y),
-		30) < 0)) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p44,
-			{gameState: 2}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p44, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$checkHit = function (_p45) {
-	var _p46 = _p45;
-	var _p47 = _p46._0;
-	return ((_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$abs(
-			_elm_lang$core$Basics$round(_p47.position.x) - _p47.dangerOne.x),
-		70) < 0) && (_elm_lang$core$Native_Utils.cmp(
-		_elm_lang$core$Basics$abs(
-			_elm_lang$core$Basics$round(_p47.position.y) - _p47.dangerOne.y),
-		30) < 0)) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p47,
-			{gameState: 2}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p47, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$movePlayer = function (_p48) {
-	var _p49 = _p48;
-	var _p50 = _p49._0;
-	return {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p50,
-			{
-				position: {x: _p50.position.x, y: _p50.position.y + _p50.momentium}
-			}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	};
-};
-var _user$project$Main$gravity = function (_p51) {
-	var _p52 = _p51;
-	var _p53 = _p52._0;
-	return {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p53,
-			{momentium: _p53.momentium + 0.25}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	};
-};
-var _user$project$Main$checkPlayer = function (_p54) {
-	var _p55 = _p54;
-	var _p56 = _p55._0;
-	return ((_elm_lang$core$Native_Utils.cmp(_p56.position.x, _p56.borderDims.x) < 0) || ((_elm_lang$core$Native_Utils.cmp(_p56.position.x, _p56.borderDims.x + 1000) > 0) || ((_elm_lang$core$Native_Utils.cmp(_p56.position.y, _p56.borderDims.y) < 0) || (_elm_lang$core$Native_Utils.cmp(_p56.position.y, _p56.borderDims.y + 700) > 0)))) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p56,
-			{gameState: 2}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p56, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$updateScore = function (_p57) {
-	var _p58 = _p57;
-	var _p59 = _p58._0;
-	return _elm_lang$core$Native_Utils.eq(_p59.gameState, 1) ? {
-		ctor: '_Tuple2',
-		_0: _elm_lang$core$Native_Utils.update(
-			_p59,
-			{myScore: _p59.myScore + 0.25}),
-		_1: _elm_lang$core$Platform_Cmd$none
-	} : {ctor: '_Tuple2', _0: _p59, _1: _elm_lang$core$Platform_Cmd$none};
-};
-var _user$project$Main$timeTick = function (model) {
-	return _user$project$Main$checkPlayer(
-		_user$project$Main$movePlayer(
-			_user$project$Main$gravity(
-				_user$project$Main$checkHitFive(
-					_user$project$Main$checkHitFour(
-						_user$project$Main$checkHitThree(
-							_user$project$Main$checkHitTwo(
-								_user$project$Main$checkHit(
-									_user$project$Main$wrapStuffFive(
-										_user$project$Main$wrapStuffFour(
-											_user$project$Main$wrapStuffThree(
-												_user$project$Main$wrapStuffTwo(
-													_user$project$Main$wrapStuff(
-														_user$project$Main$moveStuffFive(
-															_user$project$Main$moveStuffFour(
-																_user$project$Main$moveStuffThree(
-																	_user$project$Main$moveStuffTwo(
-																		_user$project$Main$updateScore(
-																			_user$project$Main$moveStuff(
-																				_user$project$Main$updateBorderDims(
-																					_user$project$Main$wrapCmd(model)))))))))))))))))))));
-};
-var _user$project$Main$emptyBox = 'fill:none;stroke:black;stroke-width:5;opacity:0.1';
-var _user$project$Main$myHeight = '30';
-var _user$project$Main$myWidth = '70';
 var _user$project$Main$view = function (model) {
+	var pipeOffsetFour = _elm_lang$core$Basics$toString(-200 + model.dangerFour.y);
+	var pipeOffsetThree = _elm_lang$core$Basics$toString(-200 + model.dangerThree.y);
+	var pipeOffsetTwo = _elm_lang$core$Basics$toString(-200 + model.dangerTwo.y);
+	var pipeOffset = _elm_lang$core$Basics$toString(-200 + model.dangerOne.y);
+	var pipeHeight = _elm_lang$core$Basics$toString(260 * 4);
+	var pipeSize = _elm_lang$core$Basics$toString(176 * 4);
 	var moveTo = _elm_lang$core$Basics$toString(
 		_elm_lang$core$Basics$toString(model.myTime.currentTime));
 	var posY = _elm_lang$core$Basics$toString(model.position.y);
 	var posX = _elm_lang$core$Basics$toString(model.position.x);
-	return _elm_lang$core$Native_Utils.eq(model.gameState, 2) ? A2(
+	return A2(
 		_elm_lang$html$Html$div,
+		{ctor: '[]'},
 		{
 			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$align('center'),
-			_1: {ctor: '[]'}
-		},
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$h1,
-				{ctor: '[]'},
+			_0: _elm_lang$core$Native_Utils.eq(model.gameState, 2) ? A2(
+				_elm_lang$html$Html$div,
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html$text(
-						A2(
-							_elm_lang$core$Basics_ops['++'],
-							'Your final score was: ',
-							_elm_lang$core$Basics$toString(model.myScore))),
+					_0: _elm_lang$html$Html_Attributes$align('center'),
 					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$p,
-					{ctor: '[]'},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text('Press F5 to try again!'),
-						_1: {ctor: '[]'}
-					}),
-				_1: {ctor: '[]'}
-			}
-		}) : A2(
-		_elm_lang$svg$Svg$svg,
-		{
-			ctor: '::',
-			_0: _elm_lang$svg$Svg_Attributes$width('1250'),
-			_1: {
-				ctor: '::',
-				_0: _elm_lang$svg$Svg_Attributes$height('750'),
-				_1: {ctor: '[]'}
-			}
-		},
-		A2(
-			_elm_lang$core$Basics_ops['++'],
-			{ctor: '[]'},
-			A2(
-				_elm_lang$core$Basics_ops['++'],
+				},
 				{
 					ctor: '::',
 					_0: A2(
-						_elm_lang$svg$Svg$rect,
+						_elm_lang$html$Html$h1,
+						{ctor: '[]'},
 						{
 							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$x(posX),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$y(posY),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
-										_1: {
-											ctor: '::',
-											_0: _elm_lang$svg$Svg_Attributes$fill('red'),
-											_1: {ctor: '[]'}
-										}
-									}
-								}
-							}
-						},
-						{ctor: '[]'}),
-					_1: {ctor: '[]'}
-				},
-				A2(
-					_elm_lang$core$Basics_ops['++'],
-					{
+							_0: _elm_lang$html$Html$text(
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'Your final score was: ',
+									_elm_lang$core$Basics$toString(model.myScore))),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
 						ctor: '::',
 						_0: A2(
-							_elm_lang$svg$Svg$rect,
+							_elm_lang$html$Html$p,
+							{ctor: '[]'},
 							{
 								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$x(
-									_elm_lang$core$Basics$toString(model.dangerOne.x)),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$y(
-										_elm_lang$core$Basics$toString(model.dangerOne.y)),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
-										_1: {
-											ctor: '::',
-											_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
-											_1: {
-												ctor: '::',
-												_0: _elm_lang$svg$Svg_Attributes$fill('blue'),
-												_1: {ctor: '[]'}
-											}
-										}
-									}
-								}
-							},
-							{ctor: '[]'}),
+								_0: _elm_lang$html$Html$text('Click to restart!'),
+								_1: {ctor: '[]'}
+							}),
 						_1: {ctor: '[]'}
+					}
+				}) : A2(
+				_elm_lang$html$Html$div,
+				{ctor: '[]'},
+				{ctor: '[]'}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$svg$Svg$svg,
+					{
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$width(
+							_elm_lang$core$Basics$toString(model.borderDims.x * 7)),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$height(
+								_elm_lang$core$Basics$toString((model.borderDims.y * 50) - 4)),
+							_1: {ctor: '[]'}
+						}
 					},
 					A2(
 						_elm_lang$core$Basics_ops['++'],
 						{
 							ctor: '::',
 							_0: A2(
-								_elm_lang$svg$Svg$rect,
+								_elm_lang$svg$Svg$image,
 								{
 									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$x(
-										_elm_lang$core$Basics$toString(model.dangerTwo.x)),
+									_0: _elm_lang$svg$Svg_Attributes$x('0'),
 									_1: {
 										ctor: '::',
-										_0: _elm_lang$svg$Svg_Attributes$y(
-											_elm_lang$core$Basics$toString(model.dangerTwo.y)),
+										_0: _elm_lang$svg$Svg_Attributes$y('0'),
 										_1: {
 											ctor: '::',
-											_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
+											_0: _elm_lang$svg$Svg_Attributes$width('100%'),
 											_1: {
 												ctor: '::',
-												_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
+												_0: _elm_lang$svg$Svg_Attributes$height('100%'),
 												_1: {
 													ctor: '::',
-													_0: _elm_lang$svg$Svg_Attributes$fill('blue'),
+													_0: _elm_lang$svg$Svg_Attributes$xlinkHref('./background.png'),
 													_1: {ctor: '[]'}
 												}
 											}
@@ -486,24 +107,23 @@ var _user$project$Main$view = function (model) {
 							{
 								ctor: '::',
 								_0: A2(
-									_elm_lang$svg$Svg$rect,
+									_elm_lang$svg$Svg$image,
 									{
 										ctor: '::',
 										_0: _elm_lang$svg$Svg_Attributes$x(
-											_elm_lang$core$Basics$toString(model.dangerThree.x)),
+											_elm_lang$core$Basics$toString(model.dangerOne.x)),
 										_1: {
 											ctor: '::',
-											_0: _elm_lang$svg$Svg_Attributes$y(
-												_elm_lang$core$Basics$toString(model.dangerThree.y)),
+											_0: _elm_lang$svg$Svg_Attributes$y(pipeOffset),
 											_1: {
 												ctor: '::',
-												_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
+												_0: _elm_lang$svg$Svg_Attributes$width(pipeSize),
 												_1: {
 													ctor: '::',
-													_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
+													_0: _elm_lang$svg$Svg_Attributes$height(pipeHeight),
 													_1: {
 														ctor: '::',
-														_0: _elm_lang$svg$Svg_Attributes$fill('blue'),
+														_0: _elm_lang$svg$Svg_Attributes$xlinkHref('./newPipe.png'),
 														_1: {ctor: '[]'}
 													}
 												}
@@ -518,24 +138,23 @@ var _user$project$Main$view = function (model) {
 								{
 									ctor: '::',
 									_0: A2(
-										_elm_lang$svg$Svg$rect,
+										_elm_lang$svg$Svg$image,
 										{
 											ctor: '::',
 											_0: _elm_lang$svg$Svg_Attributes$x(
-												_elm_lang$core$Basics$toString(model.dangerFour.x)),
+												_elm_lang$core$Basics$toString(model.dangerTwo.x)),
 											_1: {
 												ctor: '::',
-												_0: _elm_lang$svg$Svg_Attributes$y(
-													_elm_lang$core$Basics$toString(model.dangerFour.y)),
+												_0: _elm_lang$svg$Svg_Attributes$y(pipeOffsetTwo),
 												_1: {
 													ctor: '::',
-													_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
+													_0: _elm_lang$svg$Svg_Attributes$width(pipeSize),
 													_1: {
 														ctor: '::',
-														_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
+														_0: _elm_lang$svg$Svg_Attributes$height(pipeHeight),
 														_1: {
 															ctor: '::',
-															_0: _elm_lang$svg$Svg_Attributes$fill('blue'),
+															_0: _elm_lang$svg$Svg_Attributes$xlinkHref('./newPipe.png'),
 															_1: {ctor: '[]'}
 														}
 													}
@@ -550,24 +169,23 @@ var _user$project$Main$view = function (model) {
 									{
 										ctor: '::',
 										_0: A2(
-											_elm_lang$svg$Svg$rect,
+											_elm_lang$svg$Svg$image,
 											{
 												ctor: '::',
 												_0: _elm_lang$svg$Svg_Attributes$x(
-													_elm_lang$core$Basics$toString(model.dangerFive.x)),
+													_elm_lang$core$Basics$toString(model.dangerThree.x)),
 												_1: {
 													ctor: '::',
-													_0: _elm_lang$svg$Svg_Attributes$y(
-														_elm_lang$core$Basics$toString(model.dangerFive.y)),
+													_0: _elm_lang$svg$Svg_Attributes$y(pipeOffsetThree),
 													_1: {
 														ctor: '::',
-														_0: _elm_lang$svg$Svg_Attributes$width(_user$project$Main$myWidth),
+														_0: _elm_lang$svg$Svg_Attributes$width(pipeSize),
 														_1: {
 															ctor: '::',
-															_0: _elm_lang$svg$Svg_Attributes$height(_user$project$Main$myHeight),
+															_0: _elm_lang$svg$Svg_Attributes$height(pipeHeight),
 															_1: {
 																ctor: '::',
-																_0: _elm_lang$svg$Svg_Attributes$fill('blue'),
+																_0: _elm_lang$svg$Svg_Attributes$xlinkHref('./newPipe.png'),
 																_1: {ctor: '[]'}
 															}
 														}
@@ -577,37 +195,458 @@ var _user$project$Main$view = function (model) {
 											{ctor: '[]'}),
 										_1: {ctor: '[]'}
 									},
-									{
-										ctor: '::',
-										_0: A2(
-											_elm_lang$svg$Svg$rect,
-											{
-												ctor: '::',
-												_0: _elm_lang$svg$Svg_Attributes$x(
-													_elm_lang$core$Basics$toString(model.borderDims.x)),
-												_1: {
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										{
+											ctor: '::',
+											_0: A2(
+												_elm_lang$svg$Svg$image,
+												{
 													ctor: '::',
-													_0: _elm_lang$svg$Svg_Attributes$y(
-														_elm_lang$core$Basics$toString(model.borderDims.y)),
+													_0: _elm_lang$svg$Svg_Attributes$x(
+														_elm_lang$core$Basics$toString(model.dangerFour.x)),
 													_1: {
 														ctor: '::',
-														_0: _elm_lang$svg$Svg_Attributes$width('1000'),
+														_0: _elm_lang$svg$Svg_Attributes$y(pipeOffsetFour),
 														_1: {
 															ctor: '::',
-															_0: _elm_lang$svg$Svg_Attributes$height('700'),
+															_0: _elm_lang$svg$Svg_Attributes$width(pipeSize),
 															_1: {
 																ctor: '::',
-																_0: _elm_lang$svg$Svg_Attributes$style(_user$project$Main$emptyBox),
-																_1: {ctor: '[]'}
+																_0: _elm_lang$svg$Svg_Attributes$height(pipeHeight),
+																_1: {
+																	ctor: '::',
+																	_0: _elm_lang$svg$Svg_Attributes$xlinkHref('./newPipe.png'),
+																	_1: {ctor: '[]'}
+																}
 															}
 														}
 													}
-												}
+												},
+												{ctor: '[]'}),
+											_1: {ctor: '[]'}
+										},
+										_elm_lang$core$Native_Utils.eq(model.gameState, 0) ? A2(
+											_elm_lang$core$Basics_ops['++'],
+											{
+												ctor: '::',
+												_0: A2(
+													_elm_lang$svg$Svg$image,
+													{
+														ctor: '::',
+														_0: _elm_lang$svg$Svg_Attributes$x('425'),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$svg$Svg_Attributes$y('0'),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$svg$Svg_Attributes$width('658'),
+																_1: {
+																	ctor: '::',
+																	_0: _elm_lang$svg$Svg_Attributes$height('370.3'),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_lang$svg$Svg_Attributes$xlinkHref('./flappy-bird.svg'),
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
+													},
+													{ctor: '[]'}),
+												_1: {ctor: '[]'}
 											},
-											{ctor: '[]'}),
-										_1: {ctor: '[]'}
-									}))))))));
+											{
+												ctor: '::',
+												_0: A2(
+													_elm_lang$svg$Svg$image,
+													{
+														ctor: '::',
+														_0: _elm_lang$svg$Svg_Attributes$x('450'),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$svg$Svg_Attributes$y('300'),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$svg$Svg_Attributes$width('658'),
+																_1: {
+																	ctor: '::',
+																	_0: _elm_lang$svg$Svg_Attributes$height(
+																		_elm_lang$core$Basics$toString((model.borderDims.y * 50) - 50)),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_lang$svg$Svg_Attributes$xlinkHref('./startText.png'),
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
+													},
+													{ctor: '[]'}),
+												_1: {ctor: '[]'}
+											}) : A2(
+											_elm_lang$core$Basics_ops['++'],
+											{ctor: '[]'},
+											_elm_lang$core$Native_Utils.eq(model.gameState, 1) ? {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$svg$Svg$image,
+													{
+														ctor: '::',
+														_0: _elm_lang$svg$Svg_Attributes$x(posX),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$svg$Svg_Attributes$y(posY),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$svg$Svg_Attributes$width('140'),
+																_1: {
+																	ctor: '::',
+																	_0: _elm_lang$svg$Svg_Attributes$height('80'),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_lang$svg$Svg_Attributes$xlinkHref('./bird.png'),
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
+													},
+													{ctor: '[]'}),
+												_1: {ctor: '[]'}
+											} : {ctor: '[]'}))))))),
+				_1: {ctor: '[]'}
+			}
+		});
 };
+var _user$project$Main$wrapStuffFour = function (_p0) {
+	var _p1 = _p0;
+	var _p2 = _p1._0;
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$toFloat(_p2.dangerFour.x),
+		_p2.borderDims.x - 700) < 0) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p2,
+			{
+				dangerFour: {x: 1200, y: 0 + (_p2.randomNumb * 20)}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p2, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$wrapStuffThree = function (_p3) {
+	var _p4 = _p3;
+	var _p5 = _p4._0;
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$toFloat(_p5.dangerThree.x),
+		_p5.borderDims.x - 700) < 0) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p5,
+			{
+				dangerThree: {x: 1200, y: 0 + (_p5.randomNumb * 20)}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p5, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$wrapStuffTwo = function (_p6) {
+	var _p7 = _p6;
+	var _p8 = _p7._0;
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$toFloat(_p8.dangerTwo.x),
+		_p8.borderDims.x - 700) < 0) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p8,
+			{
+				dangerTwo: {x: 1200, y: 0 + (_p8.randomNumb * 20)}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p8, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$wrapStuff = function (_p9) {
+	var _p10 = _p9;
+	var _p11 = _p10._0;
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$toFloat(_p11.dangerOne.x),
+		_p11.borderDims.x - 700) < 0) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p11,
+			{
+				dangerOne: {x: 1200, y: 0 + (_p11.randomNumb * 15)}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p11, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$updateBorderDims = function (_p12) {
+	var _p13 = _p12;
+	var _p14 = _p13._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p14,
+			{
+				borderDims: {
+					x: _user$project$Main$getWidth(_p14.dimensions) / 7,
+					y: _user$project$Main$getHeight(_p14.dimensions) / 50
+				}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$wrapCmd = function (model) {
+	return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$moveStuffFour = function (_p15) {
+	var _p16 = _p15;
+	var _p17 = _p16._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p17,
+			{
+				dangerFour: {x: _p17.dangerFour.x - 3, y: _p17.dangerFour.y}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$moveStuffThree = function (_p18) {
+	var _p19 = _p18;
+	var _p20 = _p19._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p20,
+			{
+				dangerThree: {x: _p20.dangerThree.x - 3, y: _p20.dangerThree.y}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$moveStuffTwo = function (_p21) {
+	var _p22 = _p21;
+	var _p23 = _p22._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p23,
+			{
+				dangerTwo: {x: _p23.dangerTwo.x - 3, y: _p23.dangerTwo.y}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$moveStuff = function (_p24) {
+	var _p25 = _p24;
+	var _p26 = _p25._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p26,
+			{
+				dangerOne: {x: _p26.dangerOne.x - 3, y: _p26.dangerOne.y}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$checkHitFour = function (_p27) {
+	var _p28 = _p27;
+	var _p29 = _p28._0;
+	return (((_elm_lang$core$Native_Utils.cmp(_p29.dangerFour.x, 90) < 0) && (_elm_lang$core$Native_Utils.cmp(_p29.dangerFour.x, -60) > 0)) && ((_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p29.position.y) - _p29.dangerFour.y),
+		284) < 0) || (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p29.position.y) - _p29.dangerFour.y),
+		356) > 0))) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p29,
+			{gameState: 2}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p29, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$checkHitThree = function (_p30) {
+	var _p31 = _p30;
+	var _p32 = _p31._0;
+	return (((_elm_lang$core$Native_Utils.cmp(_p32.dangerThree.x, 90) < 0) && (_elm_lang$core$Native_Utils.cmp(_p32.dangerThree.x, -60) > 0)) && ((_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p32.position.y) - _p32.dangerThree.y),
+		284) < 0) || (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p32.position.y) - _p32.dangerThree.y),
+		356) > 0))) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p32,
+			{gameState: 2}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p32, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$checkHitTwo = function (_p33) {
+	var _p34 = _p33;
+	var _p35 = _p34._0;
+	return (((_elm_lang$core$Native_Utils.cmp(_p35.dangerTwo.x, 90) < 0) && (_elm_lang$core$Native_Utils.cmp(_p35.dangerTwo.x, -60) > 0)) && ((_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p35.position.y) - _p35.dangerTwo.y),
+		284) < 0) || (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p35.position.y) - _p35.dangerTwo.y),
+		356) > 0))) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p35,
+			{gameState: 2}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p35, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$checkHit = function (_p36) {
+	var _p37 = _p36;
+	var _p38 = _p37._0;
+	return (((_elm_lang$core$Native_Utils.cmp(_p38.dangerOne.x, 90) < 0) && (_elm_lang$core$Native_Utils.cmp(_p38.dangerOne.x, -60) > 0)) && ((_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p38.position.y) - _p38.dangerOne.y),
+		284) < 0) || (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$Basics$abs(
+			_elm_lang$core$Basics$round(_p38.position.y) - _p38.dangerOne.y),
+		356) > 0))) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p38,
+			{gameState: 2}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p38, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$movePlayer = function (_p39) {
+	var _p40 = _p39;
+	var _p41 = _p40._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p41,
+			{
+				position: {x: _p41.position.x, y: _p41.position.y + _p41.momentium}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$gravity = function (_p42) {
+	var _p43 = _p42;
+	var _p44 = _p43._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p44,
+			{momentium: _p44.momentium + 0.18}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$checkPlayer = function (_p45) {
+	var _p46 = _p45;
+	var _p47 = _p46._0;
+	return ((_elm_lang$core$Native_Utils.cmp(_p47.position.x, _p47.borderDims.x) < 0) || ((_elm_lang$core$Native_Utils.cmp(_p47.position.x, _p47.borderDims.x + 1000) > 0) || ((_elm_lang$core$Native_Utils.cmp(_p47.position.y, _p47.borderDims.y - 70) < 0) || (_elm_lang$core$Native_Utils.cmp(_p47.position.y, _p47.borderDims.y + 700) > 0)))) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p47,
+			{gameState: 2}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p47, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$updateScore = function (_p48) {
+	var _p49 = _p48;
+	var _p50 = _p49._0;
+	return _elm_lang$core$Native_Utils.eq(_p50.gameState, 1) ? {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p50,
+			{myScore: _p50.myScore + 0.25}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	} : {ctor: '_Tuple2', _0: _p50, _1: _elm_lang$core$Platform_Cmd$none};
+};
+var _user$project$Main$debugGame = function (_p51) {
+	var _p52 = _p51;
+	var _p53 = _p52._0;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p53,
+			{
+				dangerFive: {
+					x: _elm_lang$core$Basics$abs(
+						_elm_lang$core$Basics$round(_p53.position.x) - _p53.dangerOne.x),
+					y: _elm_lang$core$Basics$abs(
+						_elm_lang$core$Basics$round(_p53.position.y) - _p53.dangerOne.y)
+				}
+			}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$startGame = function (_p54) {
+	var _p55 = _p54;
+	return {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Native_Utils.update(
+			_p55._0,
+			{gameState: 1}),
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$timeTick = function (model) {
+	return _user$project$Main$checkPlayer(
+		_user$project$Main$movePlayer(
+			_user$project$Main$gravity(
+				_user$project$Main$checkHitFour(
+					_user$project$Main$wrapStuffFour(
+						_user$project$Main$moveStuffFour(
+							_user$project$Main$checkHitThree(
+								_user$project$Main$wrapStuffThree(
+									_user$project$Main$moveStuffThree(
+										_user$project$Main$checkHitTwo(
+											_user$project$Main$wrapStuffTwo(
+												_user$project$Main$moveStuffTwo(
+													_user$project$Main$checkHit(
+														_user$project$Main$wrapStuff(
+															_user$project$Main$moveStuff(
+																_user$project$Main$updateScore(
+																	_user$project$Main$updateBorderDims(
+																		_user$project$Main$wrapCmd(model))))))))))))))))));
+};
+var _user$project$Main$gameMenu = function (model) {
+	return _user$project$Main$wrapStuffFour(
+		_user$project$Main$moveStuffFour(
+			_user$project$Main$wrapStuffThree(
+				_user$project$Main$moveStuffThree(
+					_user$project$Main$wrapStuffTwo(
+						_user$project$Main$moveStuffTwo(
+							_user$project$Main$wrapStuff(
+								_user$project$Main$moveStuff(
+									_user$project$Main$wrapCmd(model)))))))));
+};
+var _user$project$Main$initGame = function (model) {
+	return {
+		ctor: '_Tuple2',
+		_0: {
+			position: {x: 300, y: 300},
+			myTime: {currentTime: 0},
+			dangerOne: {x: 700, y: 0},
+			dangerTwo: {x: 400, y: 50},
+			dangerThree: {x: -100, y: -30},
+			dangerFour: {x: -300, y: 0},
+			dangerFive: {x: 300, y: 500},
+			borderDims: {x: 220, y: 15},
+			randomNumb: model.randomNumb,
+			dimensions: model.dimensions,
+			gameState: 1,
+			momentium: 0,
+			myScore: 0
+		},
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+};
+var _user$project$Main$emptyBox = 'fill:none;stroke:black;stroke-width:5;opacity:0.1';
+var _user$project$Main$myHeight = '30';
+var _user$project$Main$myWidth = '70';
 var _user$project$Main$full = '100%';
 var _user$project$Main$Model = function (a) {
 	return function (b) {
@@ -645,15 +684,15 @@ var _user$project$Main$init = {
 	_0: {
 		position: {x: 300, y: 300},
 		myTime: {currentTime: 0},
-		dangerOne: {x: 1100, y: 200},
-		dangerTwo: {x: 700, y: 300},
-		dangerThree: {x: 800, y: 400},
-		dangerFour: {x: 600, y: 200},
-		dangerFive: {x: 850, y: 500},
+		dangerOne: {x: 700, y: 0},
+		dangerTwo: {x: 400, y: 50},
+		dangerThree: {x: -100, y: -30},
+		dangerFour: {x: -300, y: 0},
+		dangerFive: {x: 300, y: 500},
 		borderDims: {x: 220, y: 15},
 		randomNumb: 0,
 		dimensions: A2(_elm_lang$window$Window$Size, 0, 0),
-		gameState: 1,
+		gameState: 0,
 		momentium: 0,
 		myScore: 0
 	},
@@ -665,22 +704,47 @@ var _user$project$Main$OnResult = function (a) {
 };
 var _user$project$Main$update = F2(
 	function (msg, model) {
-		var _p60 = msg;
-		switch (_p60.ctor) {
+		var _p56 = msg;
+		switch (_p56.ctor) {
 			case 'KeyMsg':
-				var _p61 = _p60._0;
-				return {
-					ctor: '_Tuple2',
-					_0: _elm_lang$core$Native_Utils.update(
-						model,
-						{momentium: model.momentium - 4}),
-					_1: A2(
-						_elm_lang$core$Random$generate,
-						_user$project$Main$OnResult,
-						A2(_elm_lang$core$Random$int, 0, 10))
-				};
+				var _p57 = _p56._0;
+				switch (_p57) {
+					case 68:
+						return {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Native_Utils.update(
+								model,
+								{momentium: model.momentium + 1}),
+							_1: A2(
+								_elm_lang$core$Random$generate,
+								_user$project$Main$OnResult,
+								A2(_elm_lang$core$Random$int, -5, 5))
+						};
+					case 65:
+						return {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Native_Utils.update(
+								model,
+								{momentium: model.momentium - 1}),
+							_1: A2(
+								_elm_lang$core$Random$generate,
+								_user$project$Main$OnResult,
+								A2(_elm_lang$core$Random$int, -5, 5))
+						};
+					default:
+						return {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Native_Utils.update(
+								model,
+								{momentium: model.momentium - 4}),
+							_1: A2(
+								_elm_lang$core$Random$generate,
+								_user$project$Main$OnResult,
+								A2(_elm_lang$core$Random$int, -5, 5))
+						};
+				}
 			case 'Tick':
-				return _user$project$Main$timeTick(model);
+				return _elm_lang$core$Native_Utils.eq(model.gameState, 0) ? _user$project$Main$gameMenu(model) : (_elm_lang$core$Native_Utils.eq(model.gameState, 4) ? _user$project$Main$initGame(model) : (_elm_lang$core$Native_Utils.eq(model.gameState, 1) ? _user$project$Main$timeTick(model) : _user$project$Main$gameMenu(model)));
 			case 'Roll':
 				return {
 					ctor: '_Tuple2',
@@ -688,14 +752,14 @@ var _user$project$Main$update = F2(
 					_1: A2(
 						_elm_lang$core$Random$generate,
 						_user$project$Main$OnResult,
-						A2(_elm_lang$core$Random$int, 0, 10))
+						A2(_elm_lang$core$Random$int, -5, 5))
 				};
 			case 'OnResult':
 				return {
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
-						{randomNumb: _p60._0}),
+						{randomNumb: _p56._0}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			case 'SizeUpdated':
@@ -703,7 +767,7 @@ var _user$project$Main$update = F2(
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
-						{dimensions: _p60._0}),
+						{dimensions: _p56._0}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			default:
@@ -711,15 +775,15 @@ var _user$project$Main$update = F2(
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
-						{gameState: 1}),
+						{gameState: 4}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 		}
 	});
 var _user$project$Main$Roll = {ctor: 'Roll'};
-var _user$project$Main$updateRandom = function (_p62) {
-	var _p63 = _p62;
-	return A2(_user$project$Main$update, _user$project$Main$Roll, _p63._0);
+var _user$project$Main$updateRandom = function (_p58) {
+	var _p59 = _p58;
+	return A2(_user$project$Main$update, _user$project$Main$Roll, _p59._0);
 };
 var _user$project$Main$Tick = function (a) {
 	return {ctor: 'Tick', _0: a};
@@ -738,7 +802,7 @@ var _user$project$Main$subscriptions = function (model) {
 				_1: {
 					ctor: '::',
 					_0: _elm_lang$mouse$Mouse$clicks(
-						function (_p64) {
+						function (_p60) {
 							return _user$project$Main$Click;
 						}),
 					_1: {ctor: '[]'}
