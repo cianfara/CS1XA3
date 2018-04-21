@@ -1,3 +1,14 @@
+{-|
+Module : ExprPretty
+Description : Contains a type class and instances for
+differentiable expressions
+Copyright : (c) Adam Cianfarani @2018
+License : CC0
+Maintainer : cianfara@mcmaster.ca
+Stability : experimental
+Portability : POSIX
+
+-}
 module ExprPretty where
 
 import           ExprType
@@ -6,10 +17,10 @@ parens :: String -> String
 parens ss = "(" ++ ss ++ ")"
 
 instance Show a => Show (Expr a) where
-  show (Mult e1 e2) = parens (show e1) ++ " !* " ++ parens (show e2)
-  show (Add e1 e2)  = parens (show e1) ++ " !+ " ++ parens (show e2)
-  show (Sub e1 e2)  = parens (show e1) ++ " !- " ++ parens (show e2)
-  show (Div e1 e2)  = parens (show e1) ++ " !/ " ++ parens (show e2)
+  show (Mult e1 e2) = parens (show e1) ++ " * " ++ parens (show e2)
+  show (Add e1 e2)  = parens (show e1) ++ " + " ++ parens (show e2)
+  show (Sub e1 e2)  = parens (show e1) ++ " - " ++ parens (show e2)
+  show (Div e1 e2)  = parens (show e1) ++ " / " ++ parens (show e2)
   show (Log e1 e2)  = "Log" ++ parens (show e1) ++ "to" ++ parens (show e2)
   show (Pow e1 e2)  = parens (show e1) ++ "^" ++ parens (show e2)
   show (Sin e1)  = "Sin" ++ parens (show e1)

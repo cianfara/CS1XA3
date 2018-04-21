@@ -1,3 +1,14 @@
+{-|
+Module : ExprType
+Description : Contains a type class and instances for
+differentiable expressions
+Copyright : (c) Adam Cianfarani @2018
+License : CC0
+Maintainer : cianfara@mcmaster.ca
+Stability : experimental
+Portability : POSIX
+
+-}
 module ExprType where
 
 import           Data.List
@@ -16,6 +27,7 @@ data Expr a = Add (Expr a) (Expr a)  --Addition
             | Var String             --String
   deriving Eq
 
+
 getVars :: Expr a -> [String]
 getVars (Add e1 e2)  = getVars e1 ++ getVars e2
 getVars (Sub e1 e2)  = getVars e1 ++ getVars e2
@@ -25,7 +37,7 @@ getVars (Log e1 e2)  = getVars e1 ++ getVars e2
 getVars (Pow e1 e2)  = getVars e1 ++ getVars e2
 getVars (Sin e)      = getVars e
 getVars (Cos e)      = getVars e
-getVars (Ln e)      = getVars e
+getVars (Ln e)       = getVars e
 getVars (Exp e)      = getVars e
 getVars (Const _)    = []
 getVars (Var ident)  = [ident]

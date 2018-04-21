@@ -1,3 +1,15 @@
+{-|
+Module : ExprTest
+Description : Contains a type class and instances for
+differentiable expressions
+Copyright : (c) Adam Cianfarani @2018
+License : CC0
+Maintainer : cianfara@mcmaster.ca
+Stability : experimental
+Portability : POSIX
+
+-}
+
 module ExprTest where
 
 import           ExprDiff
