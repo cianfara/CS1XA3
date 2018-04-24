@@ -1,0 +1,24 @@
+#!/bin/bash
+echo "Create new file?"
+echo "Y/N"
+read res
+if [ "$res" == "y" ] || [ "$res" == "Y" ]
+then
+	> update.sc
+fi
+echo "How often should It update (Min)"
+read updateTime
+p=$(( $updateTime * 60 ))
+echo "Update: " $p >> update.sc
+
+echo "Enter git repo for sync"
+read p
+echo "Repo: " $p >> update.sc
+
+echo "Enter git username"
+read p
+echo "User: " $p >> update.sc   
+
+echo "Enter git pass"
+read p
+echo "Pass: " $p >> update.sc                           
