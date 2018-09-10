@@ -15,6 +15,8 @@ echo "Enter git repo for sync"
 read p
 echo "Repo: " $p >> update.sc
 
+git clone "$p"
+
 echo "Enter git username"
 read p
 echo "User: " $p >> update.sc   
