@@ -1,0 +1,17 @@
+#!/bin/bash
+if [ ! $# = 1 ]
+then
+	echo "ERROR! Please supply target dir"
+else
+if [ ! -d "$1" ]
+then
+	mkdir $1
+fi
+
+find . -name "D*" |
+while read fileName
+do
+	echo "Moving ${fileName} to ${1}"
+	cp $fileName $1
+done
+fi
