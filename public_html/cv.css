@@ -205,12 +205,12 @@
 /* Corps - Main
 ***************/
 	section[role=main] {
-		padding: 21px 0;
+		padding: 0px 0;
 		overflow: hidden;
 	}
 	
 	section[role=main] > div {
-		margin-top: 63px;
+		margin-top: 0px;
 	}
 	
 	section[role=main] h3 {
