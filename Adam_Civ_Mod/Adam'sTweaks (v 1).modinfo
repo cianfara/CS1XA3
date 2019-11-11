@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="2f3f0dc4-4d9d-4730-81b0-1478b5d6f394" version="1">
+  <Properties>
+    <Name>Adam'sTweaks</Name>
+    <Stability>Alpha</Stability>
+    <Teaser>Just a few tweaks</Teaser>
+    <Description>Just a few tweaks</Description>
+    <Authors>Adam</Authors>
+    <SpecialThanks>Dexter</SpecialThanks>
+    <HideSetupGame>0</HideSetupGame>
+    <AffectsSavedGames>1</AffectsSavedGames>
+    <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+    <SupportsSinglePlayer>1</SupportsSinglePlayer>
+    <SupportsMultiplayer>1</SupportsMultiplayer>
+    <SupportsHotSeat>1</SupportsHotSeat>
+    <SupportsMac>1</SupportsMac>
+    <ReloadAudioSystem>0</ReloadAudioSystem>
+    <ReloadLandmarkSystem>0</ReloadLandmarkSystem>
+    <ReloadStrategicViewSystem>0</ReloadStrategicViewSystem>
+    <ReloadUnitSystem>0</ReloadUnitSystem>
+  </Properties>
+  <Dependencies />
+  <References />
+  <Blocks />
+  <Files>
+    <File md5="BBA249F79985CD292C8E23763FC904FB" import="0">XML/New.xml</File>
+    <File md5="B72D06E570264D04EC53FCCD6272F3C4" import="0">XML/NewText.xml</File>
+    <File md5="65F53F4ED5799AF5065AD7E11D96E169" import="0">XML/NewUnits.xml</File>
+    <File md5="7CB2A103A15F085D1AADDBED0363548E" import="0">XML/Updates.xml</File>
+  </Files>
+  <Actions>
+    <OnModActivated>
+      <UpdateDatabase>XML/New.xml</UpdateDatabase>
+      <UpdateDatabase>XML/NewText.xml</UpdateDatabase>
+      <UpdateDatabase>XML/NewUnits.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Updates.xml</UpdateDatabase>
+    </OnModActivated>
+  </Actions>
+</Mod>

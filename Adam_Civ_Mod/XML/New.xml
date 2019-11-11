@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 9/6/2014 9:35:59 PM -->
+<GameData>
+	<Buildings>
+		<Row>
+			<Type>NUKE_SHELTER</Type>
+			<BuildingClass>BuildingClass_Nuke_Shelter</BuildingClass>
+			<Cost>400</Cost>
+			<PrereqTech>TECH_ATOMIC_THEORY</PrereqTech>
+			<Description>TXT_NUKE_SHELTER</Description>
+			<Civilopedia>TXT_NUKE_SHELTER</Civilopedia>
+			<Strategy>TXT_NUKE_SHELTER</Strategy>
+			<Help>TXT_NUKE_SHELTER</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_STABLE</ArtDefineTag>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>25</HurryCostModifier>
+			<IconAtlas>BW_ATLAS_1</IconAtlas>
+			<PortraitIndex>7</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_ResourceYieldChanges>
+		<Row>
+			<BuildingType>NUKE_SHELTER</BuildingType>
+			<NukeModifier>-80</NukeModifier>
+			<NukeExplosionRand>-25</NukeExplosionRand>
+		</Row>
+	</Building_ResourceYieldChanges>
+</GameData>

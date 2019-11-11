@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 9/6/2014 8:57:03 PM -->
+<GameData>
+	<Buildings>
+		<update>
+			<set PrereqTech="TECH_ATOMIC_THEORY"/>
+			<where Type="BUILDING_MILITARY_BASE"/>
+		</update>
+	</Buildings>
+	<Units>
+		<Update>
+			<set Embark="False"/>
+			<where type="UNIT_HELICOPTER_GUNSHIP"/>
+		</Update>
+		<Update>
+			<set Unhappiness="5"/>
+			<where type="UNIT_NUCLEAR_MISSILE"/>
+		</Update>
+		<Update>
+			<set Unhappiness="2"/>
+			<where type="UNIT_ATOMIC_BOMB"/>
+		</Update>
+	</Units>
+	<Building_YieldChanges>
+		<update>
+			<Set Yield="20"/>
+			<where BuildingType="BUILDING_NATIONAL_TREASURY" YieldType="YIELD_GOLD"/>
+		</update>
+	</Building_YieldChanges>
+</GameData>

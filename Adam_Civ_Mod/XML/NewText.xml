@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 9/6/2014 9:45:36 PM -->
+<GameData>
+	<NewText>
+		<Row>
+			<Row Tag="TXT_NUKE_SHELTER"/>
+			<Text>This will make all buildings immune to nukes(If i coded it right:)</Text>
+		</Row>
+		<Row>
+			<Row Tag="TXT_SUPER_NUKE"/>
+			<Text>THE SPAM IS OVER 9000!!</Text>
+		</Row>
+	</NewText>
+</GameData>
