@@ -1,0 +1,834 @@
+
+
+HI-TECH Software PIC LITE Macro Assembler V9.83 build 10920 
+                                                                                               Fri May 13 09:10:15 2016
+
+HI-TECH Software Omniscient Code Generator (Lite mode) build 10920
+     1  0000                     opt subtitle "HI-TECH Software Omniscient Code Generator (Lite mode) build 10920"
+     2                           
+     3                           opt pagewidth 120
+     4                           
+     5                           	opt lm
+     6                           
+     7                           	processor	16F690
+     8                           clrc	macro
+     9                           	bcf	3,0
+    10  0000                     	endm
+    11                           clrz	macro
+    12                           	bcf	3,2
+    13  0000                     	endm
+    14                           setc	macro
+    15                           	bsf	3,0
+    16  0000                     	endm
+    17                           setz	macro
+    18                           	bsf	3,2
+    19  0000                     	endm
+    20                           skipc	macro
+    21                           	btfss	3,0
+    22  0000                     	endm
+    23                           skipz	macro
+    24                           	btfss	3,2
+    25  0000                     	endm
+    26                           skipnc	macro
+    27                           	btfsc	3,0
+    28  0000                     	endm
+    29                           skipnz	macro
+    30                           	btfsc	3,2
+    31  0000                     	endm
+    32  0000                     indf	equ	0
+    33  0000                     indf0	equ	0
+    34  0002                     pc	equ	2
+    35  0002                     pcl	equ	2
+    36  0003                     status	equ	3
+    37  0004                     fsr	equ	4
+    38  0004                     fsr0	equ	4
+    39  0001                     c	equ	1
+    40  0000                     z	equ	0
+    41  000A                     pclath	equ	10
+    42                           # 3 "C:\Users\Administrator\Desktop\Adam_Code\TestLightCode.c"
+    43                           	psect config,class=CONFIG,delta=2 ;#
+    44                           # 3 "C:\Users\Administrator\Desktop\Adam_Code\TestLightCode.c"
+    45  2007  F0D4               	dw 0xFFFC & 0xFFF7 & 0xFFFF & 0xFFDF & 0xFFFF & 0xFFFF & 0xFCFF & 0xFBFF & 0xF7FF ;#
+    46                           	FNCALL	_main,_init_hardware
+    47                           	FNCALL	_main,_clear_all
+    48                           	FNROOT	_main
+    49                           	global	_PORTA
+    50                           psect	text88,local,class=CODE,delta=2
+    51                           global __ptext88
+    52  0000                     __ptext88:
+    53  0005                     _PORTA	set	5
+    54                           	global	_PORTB
+    55  0006                     _PORTB	set	6
+    56                           	global	_PORTC
+    57  0007                     _PORTC	set	7
+    58                           	global	_CARRY
+    59  0018                     _CARRY	set	24
+    60                           	global	_GIE
+    61  005F                     _GIE	set	95
+    62                           	global	_RC0
+    63  0038                     _RC0	set	56
+    64                           	global	_RC1
+    65  0039                     _RC1	set	57
+    66                           	global	_RC2
+    67  003A                     _RC2	set	58
+    68                           	global	_RC3
+    69  003B                     _RC3	set	59
+    70                           	global	_RC4
+    71  003C                     _RC4	set	60
+    72                           	global	_RC5
+    73  003D                     _RC5	set	61
+    74                           	global	_RC6
+    75  003E                     _RC6	set	62
+    76                           	global	_RC7
+    77  003F                     _RC7	set	63
+    78                           	global	_TRISA
+    79  0085                     _TRISA	set	133
+    80                           	global	_TRISB
+    81  0086                     _TRISB	set	134
+    82                           	global	_TRISC
+    83  0087                     _TRISC	set	135
+    84                           	global	_ANSEL
+    85  011E                     _ANSEL	set	286
+    86                           	global	_ANSELH
+    87  011F                     _ANSELH	set	287
+    88                           	global	_EEADR
+    89  010D                     _EEADR	set	269
+    90                           	global	_EEDATA
+    91  010C                     _EEDATA	set	268
+    92                           	global	_EECON1
+    93  018C                     _EECON1	set	396
+    94                           	global	_EECON2
+    95  018D                     _EECON2	set	397
+    96                           	global	_RD
+    97  0C60                     _RD	set	3168
+    98                           	global	_WR
+    99  0C61                     _WR	set	3169
+   100                           	global	_WREN
+   101  0C62                     _WREN	set	3170
+   102                           	file	"TestBoard.as"
+   103                           	line	#
+   104                           psect cinit,class=CODE,delta=2
+   105                           global start_initialization
+   106  0746                     start_initialization:
+   107                           
+   108                           psect cinit,class=CODE,delta=2
+   109                           global end_of_initialization
+   110                           
+   111                           ;End of C runtime variable initialization code
+   112                           
+   113  0746                     end_of_initialization:
+   114  0746  0183               clrf status
+   115  0747  118A  2F5F         ljmp _main	;jump to C main() function
+   116                           psect	cstackCOMMON,class=COMMON,space=1
+   117                           global __pcstackCOMMON
+   118  0070                     __pcstackCOMMON:
+   119                           	global	?_init_hardware
+   120  0070                     ?_init_hardware:	; 0 bytes @ 0x0
+   121                           	global	??_init_hardware
+   122  0070                     ??_init_hardware:	; 0 bytes @ 0x0
+   123                           	global	?_clear_all
+   124  0070                     ?_clear_all:	; 0 bytes @ 0x0
+   125                           	global	??_clear_all
+   126  0070                     ??_clear_all:	; 0 bytes @ 0x0
+   127                           	global	?_main
+   128  0070                     ?_main:	; 0 bytes @ 0x0
+   129                           	global	??_main
+   130  0070                     ??_main:	; 0 bytes @ 0x0
+   131  0070                     	ds	3
+   132                           	global	main@nPos
+   133  0073                     main@nPos:	; 2 bytes @ 0x3
+   134  0073                     	ds	2
+   135 ;;Data sizes: Strings 0, constant 0, data 0, bss 0, persistent 0 stack 0
+   136 ;;Auto spaces:   Size  Autos    Used
+   137 ;; COMMON          14      5       5
+   138 ;; BANK0           80      0       0
+   139 ;; BANK1           80      0       0
+   140 ;; BANK2           80      0       0
+   141                           
+   142 ;;
+   143 ;; Pointer list with targets:
+   144                           
+   145                           
+   146                           
+   147 ;;
+   148 ;; Critical Paths under _main in COMMON
+   149 ;;
+   150 ;;   None.
+   151 ;;
+   152 ;; Critical Paths under _main in BANK0
+   153 ;;
+   154 ;;   None.
+   155 ;;
+   156 ;; Critical Paths under _main in BANK1
+   157 ;;
+   158 ;;   None.
+   159 ;;
+   160 ;; Critical Paths under _main in BANK2
+   161 ;;
+   162 ;;   None.
+   163                           
+   164 ;;
+   165 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   166 ;;
+   167                           
+   168 ;;
+   169 ;;Call Graph Tables:
+   170 ;;
+   171 ;; ---------------------------------------------------------------------------------
+   172 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   173 ;; ---------------------------------------------------------------------------------
+   174 ;; (0) _main                                                 5     5      0     135
+   175 ;;                                              0 COMMON     5     5      0
+   176 ;;                      _init_hardware
+   177 ;;                          _clear_all
+   178 ;; ---------------------------------------------------------------------------------
+   179 ;; (1) _clear_all                                            0     0      0       0
+   180 ;; ---------------------------------------------------------------------------------
+   181 ;; (1) _init_hardware                                        0     0      0       0
+   182 ;; ---------------------------------------------------------------------------------
+   183 ;; Estimated maximum stack depth 1
+   184 ;; ---------------------------------------------------------------------------------
+   185                           
+   186 ;; Call Graph Graphs:
+   187                           
+   188 ;; _main (ROOT)
+   189 ;;   _init_hardware
+   190 ;;   _clear_all
+   191 ;;
+   192                           
+   193 ;; Address spaces:
+   194                           
+   195 ;;Name               Size   Autos  Total    Cost      Usage
+   196 ;;BITCOMMON            E      0       0       0        0.0%
+   197 ;;EEDATA             100      0       0       0        0.0%
+   198 ;;NULL                 0      0       0       0        0.0%
+   199 ;;CODE                 0      0       0       0        0.0%
+   200 ;;COMMON               E      5       5       1       35.7%
+   201 ;;BITSFR0              0      0       0       1        0.0%
+   202 ;;SFR0                 0      0       0       1        0.0%
+   203 ;;BITSFR1              0      0       0       2        0.0%
+   204 ;;SFR1                 0      0       0       2        0.0%
+   205 ;;STACK                0      0       1       2        0.0%
+   206 ;;BANK0               50      0       0       3        0.0%
+   207 ;;BITBANK1            50      0       0       4        0.0%
+   208 ;;BITSFR3              0      0       0       4        0.0%
+   209 ;;SFR3                 0      0       0       4        0.0%
+   210 ;;BANK1               50      0       0       5        0.0%
+   211 ;;BITSFR2              0      0       0       5        0.0%
+   212 ;;SFR2                 0      0       0       5        0.0%
+   213 ;;BITBANK2            50      0       0       6        0.0%
+   214 ;;BANK2               50      0       0       7        0.0%
+   215 ;;ABS                  0      0       0       8        0.0%
+   216 ;;BITBANK0            50      0       0       9        0.0%
+   217 ;;DATA                 0      0       0      10        0.0%
+   218                           
+   219                           	global	_main
+   220                           psect	maintext,global,class=CODE,delta=2
+   221                           global __pmaintext
+   222  075F                     __pmaintext:
+   223                           
+   224 ;; *************** function _main *****************
+   225 ;; Defined at:
+   226 ;;		line 21 in file "C:\Users\Administrator\Desktop\Adam_Code\TestLightCode.c"
+   227 ;; Parameters:    Size  Location     Type
+   228 ;;		None
+   229 ;; Auto vars:     Size  Location     Type
+   230 ;;  nPos            2    3[COMMON] int 
+   231 ;; Return value:  Size  Location     Type
+   232 ;;		None               void
+   233 ;; Registers used:
+   234 ;;		wreg, status,2, status,0, pclath, cstack
+   235 ;; Tracked objects:
+   236 ;;		On entry : 17F/0
+   237 ;;		On exit  : 0/0
+   238 ;;		Unchanged: 0/0
+   239 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   240 ;;      Params:         0       0       0       0
+   241 ;;      Locals:         2       0       0       0
+   242 ;;      Temps:          3       0       0       0
+   243 ;;      Totals:         5       0       0       0
+   244 ;;Total ram usage:        5 bytes
+   245 ;; Hardware stack levels required when called:    1
+   246 ;; This function calls:
+   247 ;;		_init_hardware
+   248 ;;		_clear_all
+   249 ;; This function is called by:
+   250 ;;		Startup code after reset
+   251 ;; This function uses a non-reentrant model
+   252 ;;
+   253                           psect	maintext
+   254                           	file	"C:\Users\Administrator\Desktop\Adam_Code\TestLightCode.c"
+   255                           	line	21
+   256                           	global	__size_of_main
+   257  00A1                     	__size_of_main	equ	__end_of_main-_main
+   258                           	
+   259  075F                     _main:	
+   260                           	opt	stack 7
+   261                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   262                           	line	22
+   263                           	
+   264  075F                     l3010:	
+   265                           ;TestLightCode.c: 22: init_hardware();
+   266  075F  118A  274F  118A   	fcall	_init_hardware
+   267  0762  2F63               	goto	l3012
+   268                           	line	24
+   269                           ;TestLightCode.c: 24: while(1)
+   270                           	
+   271  0763                     l893:	
+   272                           	line	26
+   273                           	
+   274  0763                     l3012:	
+   275                           ;TestLightCode.c: 25: {
+   276                           ;TestLightCode.c: 26: PORTC = 0b11111111;
+   277  0763  30FF               	movlw	(0FFh)
+   278  0764  1283               	bcf	status, 5	;RP0=0, select bank0
+   279  0765  1303               	bcf	status, 6	;RP1=0, select bank0
+   280  0766  0087               	movwf	(7)	;volatile
+   281                           	line	27
+   282                           	
+   283  0767                     l3014:	
+   284                           ;TestLightCode.c: 27: _delay(1000000);
+   285                           	opt asmopt_off
+   286  0767  3006               movlw  6
+   287  0768  00F2               movwf	((??_main+0)+0+2),f
+   288  0769  3013               movlw	19
+   289  076A  00F1               movwf	((??_main+0)+0+1),f
+   290  076B  30B1               	movlw	177
+   291  076C  00F0               movwf	((??_main+0)+0),f
+   292  076D                     u2307:
+   293  076D  0BF0               	decfsz	((??_main+0)+0),f
+   294  076E  2F6D               	goto	u2307
+   295  076F  0BF1               	decfsz	((??_main+0)+0+1),f
+   296  0770  2F6D               	goto	u2307
+   297  0771  0BF2               	decfsz	((??_main+0)+0+2),f
+   298  0772  2F6D               	goto	u2307
+   299  0773  2F74               	nop2
+   300                           opt asmopt_on
+   301                           
+   302                           	line	28
+   303                           	
+   304  0774                     l3016:	
+   305                           ;TestLightCode.c: 28: PORTC = 0b00000000;
+   306  0774  1283               	bcf	status, 5	;RP0=0, select bank0
+   307  0775  1303               	bcf	status, 6	;RP1=0, select bank0
+   308  0776  0187               	clrf	(7)	;volatile
+   309                           	line	29
+   310                           	
+   311  0777                     l3018:	
+   312                           ;TestLightCode.c: 29: _delay(1000000);
+   313                           	opt asmopt_off
+   314  0777  3006               movlw  6
+   315  0778  00F2               movwf	((??_main+0)+0+2),f
+   316  0779  3013               movlw	19
+   317  077A  00F1               movwf	((??_main+0)+0+1),f
+   318  077B  30B1               	movlw	177
+   319  077C  00F0               movwf	((??_main+0)+0),f
+   320  077D                     u2317:
+   321  077D  0BF0               	decfsz	((??_main+0)+0),f
+   322  077E  2F7D               	goto	u2317
+   323  077F  0BF1               	decfsz	((??_main+0)+0+1),f
+   324  0780  2F7D               	goto	u2317
+   325  0781  0BF2               	decfsz	((??_main+0)+0+2),f
+   326  0782  2F7D               	goto	u2317
+   327  0783  2F84               	nop2
+   328                           opt asmopt_on
+   329                           
+   330                           	line	30
+   331                           	
+   332  0784                     l3020:	
+   333                           ;TestLightCode.c: 30: PORTC = 0b11111111;
+   334  0784  30FF               	movlw	(0FFh)
+   335  0785  1283               	bcf	status, 5	;RP0=0, select bank0
+   336  0786  1303               	bcf	status, 6	;RP1=0, select bank0
+   337  0787  0087               	movwf	(7)	;volatile
+   338                           	line	31
+   339                           	
+   340  0788                     l3022:	
+   341                           ;TestLightCode.c: 31: int nPos=0;
+   342  0788  01F3               	clrf	(main@nPos)
+   343  0789  01F4               	clrf	(main@nPos+1)
+   344  078A  2F8B               	goto	l3024
+   345                           	line	32
+   346                           ;TestLightCode.c: 32: while(1)
+   347                           	
+   348  078B                     l894:	
+   349                           	line	34
+   350                           	
+   351  078B                     l3024:	
+   352                           ;TestLightCode.c: 33: {
+   353                           ;TestLightCode.c: 34: clear_all();
+   354  078B  118A  2749  118A   	fcall	_clear_all
+   355                           	line	35
+   356                           	
+   357  078E                     l3026:	
+   358                           ;TestLightCode.c: 35: if (nPos==0)
+   359  078E  0874               	movf	((main@nPos+1)),w
+   360  078F  0473               	iorwf	((main@nPos)),w
+   361  0790  1D03               	skipz
+   362  0791  2F93               	goto	u2221
+   363  0792  2F94               	goto	u2220
+   364  0793                     u2221:
+   365  0793  2F98               	goto	l3030
+   366  0794                     u2220:
+   367                           	line	37
+   368                           	
+   369  0794                     l3028:	
+   370                           ;TestLightCode.c: 36: {
+   371                           ;TestLightCode.c: 37: RC0=1;
+   372  0794  1283               	bcf	status, 5	;RP0=0, select bank0
+   373  0795  1303               	bcf	status, 6	;RP1=0, select bank0
+   374  0796  1407               	bsf	(56/8),(56)&7
+   375  0797  2F98               	goto	l3030
+   376                           	line	38
+   377                           	
+   378  0798                     l895:	
+   379                           	line	39
+   380                           	
+   381  0798                     l3030:	
+   382                           ;TestLightCode.c: 38: }
+   383                           ;TestLightCode.c: 39: if (nPos==1)
+   384  0798  3001               	movlw	01h
+   385  0799  0673               	xorwf	(main@nPos),w
+   386  079A  0474               	iorwf	(main@nPos+1),w
+   387  079B  1D03               	skipz
+   388  079C  2F9E               	goto	u2231
+   389  079D  2F9F               	goto	u2230
+   390  079E                     u2231:
+   391  079E  2FA3               	goto	l3034
+   392  079F                     u2230:
+   393                           	line	41
+   394                           	
+   395  079F                     l3032:	
+   396                           ;TestLightCode.c: 40: {
+   397                           ;TestLightCode.c: 41: RC1=1;
+   398  079F  1283               	bcf	status, 5	;RP0=0, select bank0
+   399  07A0  1303               	bcf	status, 6	;RP1=0, select bank0
+   400  07A1  1487               	bsf	(57/8),(57)&7
+   401  07A2  2FA3               	goto	l3034
+   402                           	line	42
+   403                           	
+   404  07A3                     l896:	
+   405                           	line	43
+   406                           	
+   407  07A3                     l3034:	
+   408                           ;TestLightCode.c: 42: }
+   409                           ;TestLightCode.c: 43: if (nPos==2)
+   410  07A3  3002               	movlw	02h
+   411  07A4  0673               	xorwf	(main@nPos),w
+   412  07A5  0474               	iorwf	(main@nPos+1),w
+   413  07A6  1D03               	skipz
+   414  07A7  2FA9               	goto	u2241
+   415  07A8  2FAA               	goto	u2240
+   416  07A9                     u2241:
+   417  07A9  2FAE               	goto	l3038
+   418  07AA                     u2240:
+   419                           	line	45
+   420                           	
+   421  07AA                     l3036:	
+   422                           ;TestLightCode.c: 44: {
+   423                           ;TestLightCode.c: 45: RC2=1;
+   424  07AA  1283               	bcf	status, 5	;RP0=0, select bank0
+   425  07AB  1303               	bcf	status, 6	;RP1=0, select bank0
+   426  07AC  1507               	bsf	(58/8),(58)&7
+   427  07AD  2FAE               	goto	l3038
+   428                           	line	46
+   429                           	
+   430  07AE                     l897:	
+   431                           	line	47
+   432                           	
+   433  07AE                     l3038:	
+   434                           ;TestLightCode.c: 46: }
+   435                           ;TestLightCode.c: 47: if (nPos==3)
+   436  07AE  3003               	movlw	03h
+   437  07AF  0673               	xorwf	(main@nPos),w
+   438  07B0  0474               	iorwf	(main@nPos+1),w
+   439  07B1  1D03               	skipz
+   440  07B2  2FB4               	goto	u2251
+   441  07B3  2FB5               	goto	u2250
+   442  07B4                     u2251:
+   443  07B4  2FB9               	goto	l3042
+   444  07B5                     u2250:
+   445                           	line	49
+   446                           	
+   447  07B5                     l3040:	
+   448                           ;TestLightCode.c: 48: {
+   449                           ;TestLightCode.c: 49: RC3=1;
+   450  07B5  1283               	bcf	status, 5	;RP0=0, select bank0
+   451  07B6  1303               	bcf	status, 6	;RP1=0, select bank0
+   452  07B7  1587               	bsf	(59/8),(59)&7
+   453  07B8  2FB9               	goto	l3042
+   454                           	line	50
+   455                           	
+   456  07B9                     l898:	
+   457                           	line	51
+   458                           	
+   459  07B9                     l3042:	
+   460                           ;TestLightCode.c: 50: }
+   461                           ;TestLightCode.c: 51: if (nPos==4)
+   462  07B9  3004               	movlw	04h
+   463  07BA  0673               	xorwf	(main@nPos),w
+   464  07BB  0474               	iorwf	(main@nPos+1),w
+   465  07BC  1D03               	skipz
+   466  07BD  2FBF               	goto	u2261
+   467  07BE  2FC0               	goto	u2260
+   468  07BF                     u2261:
+   469  07BF  2FC4               	goto	l3046
+   470  07C0                     u2260:
+   471                           	line	53
+   472                           	
+   473  07C0                     l3044:	
+   474                           ;TestLightCode.c: 52: {
+   475                           ;TestLightCode.c: 53: RC4=1;
+   476  07C0  1283               	bcf	status, 5	;RP0=0, select bank0
+   477  07C1  1303               	bcf	status, 6	;RP1=0, select bank0
+   478  07C2  1607               	bsf	(60/8),(60)&7
+   479  07C3  2FC4               	goto	l3046
+   480                           	line	54
+   481                           	
+   482  07C4                     l899:	
+   483                           	line	55
+   484                           	
+   485  07C4                     l3046:	
+   486                           ;TestLightCode.c: 54: }
+   487                           ;TestLightCode.c: 55: if (nPos==5)
+   488  07C4  3005               	movlw	05h
+   489  07C5  0673               	xorwf	(main@nPos),w
+   490  07C6  0474               	iorwf	(main@nPos+1),w
+   491  07C7  1D03               	skipz
+   492  07C8  2FCA               	goto	u2271
+   493  07C9  2FCB               	goto	u2270
+   494  07CA                     u2271:
+   495  07CA  2FCF               	goto	l3050
+   496  07CB                     u2270:
+   497                           	line	57
+   498                           	
+   499  07CB                     l3048:	
+   500                           ;TestLightCode.c: 56: {
+   501                           ;TestLightCode.c: 57: RC5=1;
+   502  07CB  1283               	bcf	status, 5	;RP0=0, select bank0
+   503  07CC  1303               	bcf	status, 6	;RP1=0, select bank0
+   504  07CD  1687               	bsf	(61/8),(61)&7
+   505  07CE  2FCF               	goto	l3050
+   506                           	line	58
+   507                           	
+   508  07CF                     l900:	
+   509                           	line	59
+   510                           	
+   511  07CF                     l3050:	
+   512                           ;TestLightCode.c: 58: }
+   513                           ;TestLightCode.c: 59: if (nPos==6)
+   514  07CF  3006               	movlw	06h
+   515  07D0  0673               	xorwf	(main@nPos),w
+   516  07D1  0474               	iorwf	(main@nPos+1),w
+   517  07D2  1D03               	skipz
+   518  07D3  2FD5               	goto	u2281
+   519  07D4  2FD6               	goto	u2280
+   520  07D5                     u2281:
+   521  07D5  2FDA               	goto	l3054
+   522  07D6                     u2280:
+   523                           	line	61
+   524                           	
+   525  07D6                     l3052:	
+   526                           ;TestLightCode.c: 60: {
+   527                           ;TestLightCode.c: 61: RC6=1;
+   528  07D6  1283               	bcf	status, 5	;RP0=0, select bank0
+   529  07D7  1303               	bcf	status, 6	;RP1=0, select bank0
+   530  07D8  1707               	bsf	(62/8),(62)&7
+   531  07D9  2FDA               	goto	l3054
+   532                           	line	62
+   533                           	
+   534  07DA                     l901:	
+   535                           	line	63
+   536                           	
+   537  07DA                     l3054:	
+   538                           ;TestLightCode.c: 62: }
+   539                           ;TestLightCode.c: 63: if (nPos==7)
+   540  07DA  3007               	movlw	07h
+   541  07DB  0673               	xorwf	(main@nPos),w
+   542  07DC  0474               	iorwf	(main@nPos+1),w
+   543  07DD  1D03               	skipz
+   544  07DE  2FE0               	goto	u2291
+   545  07DF  2FE1               	goto	u2290
+   546  07E0                     u2291:
+   547  07E0  2FE5               	goto	l3058
+   548  07E1                     u2290:
+   549                           	line	65
+   550                           	
+   551  07E1                     l3056:	
+   552                           ;TestLightCode.c: 64: {
+   553                           ;TestLightCode.c: 65: RC7=1;
+   554  07E1  1283               	bcf	status, 5	;RP0=0, select bank0
+   555  07E2  1303               	bcf	status, 6	;RP1=0, select bank0
+   556  07E3  1787               	bsf	(63/8),(63)&7
+   557  07E4  2FE5               	goto	l3058
+   558                           	line	66
+   559                           	
+   560  07E5                     l902:	
+   561                           	line	67
+   562                           	
+   563  07E5                     l3058:	
+   564                           ;TestLightCode.c: 66: }
+   565                           ;TestLightCode.c: 67: _delay(1000000);
+   566                           	opt asmopt_off
+   567  07E5  3006               movlw  6
+   568  07E6  00F2               movwf	((??_main+0)+0+2),f
+   569  07E7  3013               movlw	19
+   570  07E8  00F1               movwf	((??_main+0)+0+1),f
+   571  07E9  30B1               	movlw	177
+   572  07EA  00F0               movwf	((??_main+0)+0),f
+   573  07EB                     u2327:
+   574  07EB  0BF0               	decfsz	((??_main+0)+0),f
+   575  07EC  2FEB               	goto	u2327
+   576  07ED  0BF1               	decfsz	((??_main+0)+0+1),f
+   577  07EE  2FEB               	goto	u2327
+   578  07EF  0BF2               	decfsz	((??_main+0)+0+2),f
+   579  07F0  2FEB               	goto	u2327
+   580  07F1  2FF2               	nop2
+   581                           opt asmopt_on
+   582                           
+   583                           	line	68
+   584                           	
+   585  07F2                     l3060:	
+   586                           ;TestLightCode.c: 68: nPos=nPos+1;
+   587  07F2  0873               	movf	(main@nPos),w
+   588  07F3  3E01               	addlw	low(01h)
+   589  07F4  00F3               	movwf	(main@nPos)
+   590  07F5  0874               	movf	(main@nPos+1),w
+   591  07F6  1803               	skipnc
+   592  07F7  3E01               	addlw	1
+   593  07F8  3E00               	addlw	high(01h)
+   594  07F9  00F4               	movwf	1+(main@nPos)
+   595  07FA  2F8B               	goto	l3024
+   596                           	line	69
+   597                           	
+   598  07FB                     l903:	
+   599                           	line	32
+   600  07FB  2F8B               	goto	l3024
+   601                           	
+   602  07FC                     l904:	
+   603  07FC  2F63               	goto	l3012
+   604                           	line	70
+   605                           	
+   606  07FD                     l905:	
+   607                           	line	24
+   608  07FD  2F63               	goto	l3012
+   609                           	
+   610  07FE                     l906:	
+   611                           	line	71
+   612                           	
+   613  07FE                     l907:	
+   614                           	global	start
+   615  07FE  118A  2800         	ljmp	start
+   616                           	opt stack 0
+   617                           GLOBAL	__end_of_main
+   618  0800                     	__end_of_main:
+   619 ;; =============== function _main ends ============
+   620                           
+   621                           	signat	_main,88
+   622                           	global	_clear_all
+   623                           psect	text89,local,class=CODE,delta=2
+   624                           global __ptext89
+   625  0749                     __ptext89:
+   626                           
+   627 ;; *************** function _clear_all *****************
+   628 ;; Defined at:
+   629 ;;		line 90 in file "C:\Users\Administrator\Desktop\Adam_Code\TestLightCode.c"
+   630 ;; Parameters:    Size  Location     Type
+   631 ;;		None
+   632 ;; Auto vars:     Size  Location     Type
+   633 ;;		None
+   634 ;; Return value:  Size  Location     Type
+   635 ;;		None               void
+   636 ;; Registers used:
+   637 ;;		status,2
+   638 ;; Tracked objects:
+   639 ;;		On entry : 0/0
+   640 ;;		On exit  : 0/0
+   641 ;;		Unchanged: 0/0
+   642 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   643 ;;      Params:         0       0       0       0
+   644 ;;      Locals:         0       0       0       0
+   645 ;;      Temps:          0       0       0       0
+   646 ;;      Totals:         0       0       0       0
+   647 ;;Total ram usage:        0 bytes
+   648 ;; Hardware stack levels used:    1
+   649 ;; This function calls:
+   650 ;;		Nothing
+   651 ;; This function is called by:
+   652 ;;		_main
+   653 ;; This function uses a non-reentrant model
+   654 ;;
+   655                           psect	text89
+   656                           	file	"C:\Users\Administrator\Desktop\Adam_Code\TestLightCode.c"
+   657                           	line	90
+   658                           	global	__size_of_clear_all
+   659  0006                     	__size_of_clear_all	equ	__end_of_clear_all-_clear_all
+   660                           	
+   661  0749                     _clear_all:	
+   662                           	opt	stack 7
+   663                           ; Regs used in _clear_all: [status,2]
+   664                           	line	91
+   665                           	
+   666  0749                     l2150:	
+   667                           ;TestLightCode.c: 91: PORTA = 0b00000000;
+   668  0749  1283               	bcf	status, 5	;RP0=0, select bank0
+   669  074A  1303               	bcf	status, 6	;RP1=0, select bank0
+   670  074B  0185               	clrf	(5)	;volatile
+   671                           	line	92
+   672                           ;TestLightCode.c: 92: PORTB = 0b00000000;
+   673  074C  0186               	clrf	(6)	;volatile
+   674                           	line	93
+   675                           ;TestLightCode.c: 93: PORTC = 0b00000000;
+   676  074D  0187               	clrf	(7)	;volatile
+   677                           	line	94
+   678                           	
+   679  074E                     l913:	
+   680  074E  0008               	return
+   681                           	opt stack 0
+   682                           GLOBAL	__end_of_clear_all
+   683  074F                     	__end_of_clear_all:
+   684 ;; =============== function _clear_all ends ============
+   685                           
+   686                           	signat	_clear_all,88
+   687                           	global	_init_hardware
+   688                           psect	text90,local,class=CODE,delta=2
+   689                           global __ptext90
+   690  074F                     __ptext90:
+   691                           
+   692 ;; *************** function _init_hardware *****************
+   693 ;; Defined at:
+   694 ;;		line 74 in file "C:\Users\Administrator\Desktop\Adam_Code\TestLightCode.c"
+   695 ;; Parameters:    Size  Location     Type
+   696 ;;		None
+   697 ;; Auto vars:     Size  Location     Type
+   698 ;;		None
+   699 ;; Return value:  Size  Location     Type
+   700 ;;		None               void
+   701 ;; Registers used:
+   702 ;;		wreg, status,2
+   703 ;; Tracked objects:
+   704 ;;		On entry : 0/0
+   705 ;;		On exit  : 0/0
+   706 ;;		Unchanged: 0/0
+   707 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   708 ;;      Params:         0       0       0       0
+   709 ;;      Locals:         0       0       0       0
+   710 ;;      Temps:          0       0       0       0
+   711 ;;      Totals:         0       0       0       0
+   712 ;;Total ram usage:        0 bytes
+   713 ;; Hardware stack levels used:    1
+   714 ;; This function calls:
+   715 ;;		Nothing
+   716 ;; This function is called by:
+   717 ;;		_main
+   718 ;; This function uses a non-reentrant model
+   719 ;;
+   720                           psect	text90
+   721                           	file	"C:\Users\Administrator\Desktop\Adam_Code\TestLightCode.c"
+   722                           	line	74
+   723                           	global	__size_of_init_hardware
+   724  0010                     	__size_of_init_hardware	equ	__end_of_init_hardware-_init_hardware
+   725                           	
+   726  074F                     _init_hardware:	
+   727                           	opt	stack 7
+   728                           ; Regs used in _init_hardware: [wreg+status,2]
+   729                           	line	76
+   730                           	
+   731  074F                     l2136:	
+   732                           ;TestLightCode.c: 76: ANSEL = 0b00000000;
+   733  074F  1283               	bcf	status, 5	;RP0=0, select bank2
+   734  0750  1703               	bsf	status, 6	;RP1=1, select bank2
+   735  0751  019E               	clrf	(286)^0100h	;volatile
+   736                           	line	77
+   737                           ;TestLightCode.c: 77: ANSELH = 0b00000000;
+   738  0752  019F               	clrf	(287)^0100h	;volatile
+   739                           	line	80
+   740                           	
+   741  0753                     l2138:	
+   742                           ;TestLightCode.c: 80: TRISA = 0b00110000;
+   743  0753  3030               	movlw	(030h)
+   744  0754  1683               	bsf	status, 5	;RP0=1, select bank1
+   745  0755  1303               	bcf	status, 6	;RP1=0, select bank1
+   746  0756  0085               	movwf	(133)^080h	;volatile
+   747                           	line	81
+   748                           	
+   749  0757                     l2140:	
+   750                           ;TestLightCode.c: 81: TRISB = 0b00000000;
+   751  0757  0186               	clrf	(134)^080h	;volatile
+   752                           	line	82
+   753                           	
+   754  0758                     l2142:	
+   755                           ;TestLightCode.c: 82: TRISC = 0b00000000;
+   756  0758  0187               	clrf	(135)^080h	;volatile
+   757                           	line	85
+   758                           	
+   759  0759                     l2144:	
+   760                           ;TestLightCode.c: 85: PORTA = 0b00000000;
+   761  0759  1283               	bcf	status, 5	;RP0=0, select bank0
+   762  075A  1303               	bcf	status, 6	;RP1=0, select bank0
+   763  075B  0185               	clrf	(5)	;volatile
+   764                           	line	86
+   765                           	
+   766  075C                     l2146:	
+   767                           ;TestLightCode.c: 86: PORTB = 0b00000000;
+   768  075C  0186               	clrf	(6)	;volatile
+   769                           	line	87
+   770                           	
+   771  075D                     l2148:	
+   772                           ;TestLightCode.c: 87: PORTC = 0b00000000;
+   773  075D  0187               	clrf	(7)	;volatile
+   774                           	line	88
+   775                           	
+   776  075E                     l910:	
+   777  075E  0008               	return
+   778                           	opt stack 0
+   779                           GLOBAL	__end_of_init_hardware
+   780  075F                     	__end_of_init_hardware:
+   781 ;; =============== function _init_hardware ends ============
+   782                           
+   783                           	signat	_init_hardware,88
+   784                           psect	text91,local,class=CODE,delta=2
+   785                           global __ptext91
+   786  0000                     __ptext91:
+   787                           	global	btemp
+   788  007E                     	btemp set 07Eh
+   789                           
+   790                           	DABS	1,126,2	;btemp
+   791                           	global	wtemp0
+   792  007E                     	wtemp0 set btemp
+
+
+HI-TECH Software PICC Macro Assembler V9.83 build 10920 
+Symbol Table                                                                                   Fri May 13 09:10:15 2016
+
+                    _RD 0C60                      _WR 0C61                     l900 07CF                     l901 07DA  
+                   l910 075E                     l902 07E5                     l903 07FB                     l904 07FC  
+                   l913 074E                     l905 07FD                     l906 07FE                     l907 07FE  
+                   l893 0763                     l894 078B                     l895 0798                     l896 07A3  
+                   l897 07AE                     l898 07B9                     l899 07C4                     _GIE 005F  
+                   _RC0 0038                     _RC1 0039                     _RC2 003A                     _RC3 003B  
+                   _RC4 003C                     _RC5 003D                     _RC6 003E                     _RC7 003F  
+                  l3010 075F                    l2140 0757                    l3020 0784                    l3012 0763  
+                  l2142 0758                    l2150 0749                    l3030 0798                    l3022 0788  
+                  l3014 0767                    l2144 0759                    l2136 074F                    l3040 07B5  
+                  l3032 079F                    l3024 078B                    l3016 0774                    l2146 075C  
+                  l2138 0753                    l3050 07CF                    l3042 07B9                    l3034 07A3  
+                  l3026 078E                    l3018 0777                    l2148 075D                    l3060 07F2  
+                  l3052 07D6                    l3044 07C0                    l3036 07AA                    l3028 0794  
+                  l3054 07DA                    l3046 07C4                    l3038 07AE                    l3056 07E1  
+                  l3048 07CB                    l3058 07E5                    u2220 0794                    u2221 0793  
+                  u2230 079F                    u2231 079E                    u2240 07AA                    u2241 07A9  
+                  u2250 07B5                    u2251 07B4                    u2307 076D                    u2260 07C0  
+                  u2261 07BF                    u2317 077D                    u2270 07CB                    u2327 07EB  
+                  u2271 07CA                    u2280 07D6                    u2281 07D5                    u2290 07E1  
+                  u2291 07E0                    _WREN 0C62                    _main 075F                    btemp 007E  
+                  start 0000                   ?_main 0070                   _EEADR 010D                   _CARRY 0018  
+                 _ANSEL 011E                   _PORTA 0005                   _PORTB 0006                   _PORTC 0007  
+                 _TRISA 0085                   _TRISB 0086                   _TRISC 0087                   status 0003  
+                 wtemp0 007E            __end_of_main 0800                  ??_main 0070                  _EEDATA 010C  
+                _EECON1 018C                  _EECON2 018D                  _ANSELH 011F  __size_of_init_hardware 0010  
+        __pcstackCOMMON 0070      __size_of_clear_all 0006           _init_hardware 074F              __pmaintext 075F  
+        ?_init_hardware 0070       __end_of_clear_all 074F    end_of_initialization 0746         ??_init_hardware 0070  
+   start_initialization 0746               _clear_all 0749              ?_clear_all 0070   __end_of_init_hardware 075F  
+              __ptext90 074F                __ptext91 0000                __ptext88 0000                __ptext89 0749  
+         __size_of_main 00A1             ??_clear_all 0070                main@nPos 0073  

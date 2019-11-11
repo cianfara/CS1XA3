@@ -1,12 +1,6 @@
-
-<no location info>: can't find file: test.hs
-
-<no location info>: can't find file: ExprPretty.hs
-
-<no location info>: can't find file: ExprDiff.hs
-
-<no location info>: can't find file: ExprTest.hs
-
-<no location info>: can't find file: ExprParser.hs
-
-<no location info>: can't find file: ExprType.hs
+./ProjectAnalyze.sh: line 47: ghc: command not found
+./ProjectAnalyze.sh: line 47: ghc: command not found
+./ProjectAnalyze.sh: line 47: ghc: command not found
+./ProjectAnalyze.sh: line 47: ghc: command not found
+./ProjectAnalyze.sh: line 47: ghc: command not found
+./ProjectAnalyze.sh: line 47: ghc: command not found

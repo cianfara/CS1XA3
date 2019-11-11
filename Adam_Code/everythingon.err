@@ -1,0 +1,10 @@
+Message[302] C:\USERS\ADMINISTRATOR\DESKTOP\ADAM_CODE\EVERYTHINGON.ASM 15 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\ADMINISTRATOR\DESKTOP\ADAM_CODE\EVERYTHINGON.ASM 17 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\ADMINISTRATOR\DESKTOP\ADAM_CODE\EVERYTHINGON.ASM 19 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[202] C:\USERS\ADMINISTRATOR\DESKTOP\ADAM_CODE\EVERYTHINGON.ASM 24 : Argument out of range.  Least significant bits used.
+Warning[204] C:\USERS\ADMINISTRATOR\DESKTOP\ADAM_CODE\EVERYTHINGON.ASM 25 : Found pseudo-op in column 1. (HALT)
+Error[113]   C:\USERS\ADMINISTRATOR\DESKTOP\ADAM_CODE\EVERYTHINGON.ASM 27 : Symbol not previously defined (HALT)
+Message[305] C:\USERS\ADMINISTRATOR\DESKTOP\ADAM_CODE\EVERYTHINGON.ASM 33 : Using default destination of 1 (file).
+Warning[202] C:\USERS\ADMINISTRATOR\DESKTOP\ADAM_CODE\EVERYTHINGON.ASM 35 : Argument out of range.  Least significant bits used.
+Message[305] C:\USERS\ADMINISTRATOR\DESKTOP\ADAM_CODE\EVERYTHINGON.ASM 38 : Using default destination of 1 (file).
+Message[305] C:\USERS\ADMINISTRATOR\DESKTOP\ADAM_CODE\EVERYTHINGON.ASM 40 : Using default destination of 1 (file).
