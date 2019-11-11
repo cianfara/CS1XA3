@@ -1,0 +1,71 @@
+#!/bin/bash
+
+mkdir MY_DIR
+echo "MY_DIR directory created."
+cd MY_DIR
+mkdir MY_DIR
+echo "MY_DIR/My_dir directory created."
+cd MY_DIR
+fileText="fileA_"
+inFileTxt="File fileA_"
+nextFileTxt="Next file fileA_"
+for iii in {1..14}
+do
+   nextNum=$(($iii + 1))
+   echo $inFileTxt$iii > $fileText$iii
+   echo $nextFileTxt$nextNum >> $fileText$iii
+done
+echo "File fileA_15" > fileA_15
+echo "No successor" >> fileA_15
+echo "Regular files of subdirectory My_dir of directory MY_DIR:"
+ls -p | sed 's/.*\///' # See ls can work :D (Matches any string that ends with a / and removes it"
+echo "Created files contents:"
+stringOut="File "
+finalCol=":"
+ls -p | sed 's/.*\///' |
+while read fileName
+do
+   echo $stringOut$fileName$finalCol
+   cat $fileName
+done
+ls -p | sed 's/.*\///' | grep '1\|2\|3' |
+while read toCopy
+do
+   mv $toCopy ..
+done
+cd ..
+echo "Regular files of directory MY_DIR:"
+ls -p | sed 's/.*\///'
+ls -p | sed 's/.*\///' |
+while read fileName
+do
+   cat $fileName >> BAG
+done
+ls -p | sed 's/.*\///' | grep file |
+while read filesToRem
+do
+   rm $filesToRem
+done
+echo "All regular files of MY_DIR:"
+stringOut="File "
+finalCol=":"
+ls -p | sed 's/.*\///'
+echo "File BAG:"
+cat BAG
+cd MY_DIR
+echo "All regular files of MY_DIR/My_dir"
+ls -p | sed 's/.*\///'
+> bag
+ls -p | sed 's/.*\///' | grep file |
+while read filesToBag
+do
+   cat $filesToBag >> bag
+   rm  $filesToBag
+done
+echo "All regular files of My_dir"
+ls -p | sed 's/.*\///'
+echo "File bag:"
+cat bag
+cd ..
+cd ..
+rm -rf MY_DIR

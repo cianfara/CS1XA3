@@ -83,7 +83,7 @@ fi
 if [[ $1 == *"u"* ]]
 then
 	echo "Staring Add Files"
-	git status -s | grep "?? \| M \|M \|MM " | sed 's/.\{3\}//' |  			  	        	 #Sed is magic. Please don't touch
+	git status -s | grep "?? \| M \|M \|MM " | sed 's/.\{3\}//' |  			  	        	 #Sed removes the first three spaces
 	while read stuffToAdd
 	do
 		find -name $(basename ${stuffToAdd}) -printf '%h\n' |  						#This finds the files and leaves just the path

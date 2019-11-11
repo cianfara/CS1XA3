@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# This checks that there are no more than three arguments
+if [ $# -gt 3 ]
+then
+   echo -e "Usage: script2 -0\n\tor\n\t\tscript2 -1 <file>\n\tor\n\t\tscript2 -2 <file1> <file2>"
+   exit
+fi
+
+# Checks if there is one arg
+if [ $# == 1 ]
+then
+   if [ $1 == "-0" ] # Ensures the first arg is -0
+   then
+      echo "Thank you for nothing"
+      exit
+   else
+      echo "incorrect CLA: "$1 # A function would be better here since I use this so much
+      echo -e "Usage: script2 -0\n\tor\n\t\tscript2 -1 <file>\n\tor\n\t\tscript2 -2 <file1> <file2>"
+      exit
+   fi
+fi
+if [ $# == 2 ]  # Even this code could be compressed rather than one block for each argument
+then
+   if [ $1 == "-1" ]
+   then
+      echo "Thank you for "$2
+   else
+      echo "incorrect CLA: "$1
+      echo -e "Usage: script2 -0\n\tor\n\t\tscript2 -1 <file>\n\tor\n\t\tscript2 -2 <file1> <file2>"
+      exit    # Quit the program right here
+   fi
+fi
+
+if [ $# == 3 ]
+then
+   if [ $1 == "-2" ]
+   then
+      echo "Thank you for: "$2
+      echo "Here is: "$3
+      echo "My thanks" > Z # Save the echoed text in Z
+   else
+      echo "incorrect CLA: "$1
+      echo -e "Usage: script2 -0\n\tor\n\t\tscript2 -1 <file>\n\tor\n\t\tscript2 -2 <file1> <file2>"
+      exit
+   fi
+fi
